@@ -1,0 +1,124 @@
+---
+title: "Are kelp forests different? A comparison of kelp forests between contrasting study sites"
+output:
+  pdf_document:
+    toc: yes
+  html_notebook:
+    css: C:/Program Files/R/r_working_directory/benthic_paper/ecography.csl
+    fig_caption: yes
+    fig_height: 5
+    fig_width: 4
+    toc: yes
+  word_document:
+    toc: yes
+---
+
+```{r global_options, include = FALSE}
+knitr::opts_chunk$set(include = TRUE, echo = FALSE, warning = FALSE,
+                      message = FALSE, tidy = FALSE, cache = FALSE,
+                      fig.align = 'center',
+                      fig.show = 'hold', fig.path = 'figures/deeper-')
+```
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+
+library(tidyverse)
+library(vegan)
+library(ggplot2)
+library(reshape2)
+
+```
+
+## Introduction
+
+Kelps are a cold-water species of large brown algae, belonging to the order Laminariales (Kelly 2005). They are regarded as ecosystem engineers, providing a 3-dimensional habitat for a variety of fauna and flora. In addition, kelp ecosystems host a number of economically important species such as lobster, abalone and fish (Dayton 1985, Steneck et al. 2002). Various abiotic (e.g. light, wave exposure, sedimentation) and biotic (e.g. grazing) factors structure kelp forests (Devinny and Volse 1978, Dayton et al. 1992, Utter and Denny 1996, Toohey et al. 2004, Rothman et al. 2006, Sjøtun et al. 2006, Wernberg and Goldberg 2008, Pedersen et al. 2012). Variations in these factors ultimately affects the way kelp-associated benthos communities are structured (Dayton 1985, Guimaraes and Coutinho 1996, Wernberg and Goldberg 2008, Wernberg 2009).
+Temperature is recognised as the main abiotic driver of marine species distributions (Dayton et al. 1992, Hiscock et al. 2004, Wernberg et al. 2011, 2013, 2016, Mabin et al. 2013). Given kelp’s preference for cold-temperate waters, ocean warming poses a serious threat to these ecosystems (Wernberg et al. 2010, 2011, Vergés et al. 2016). In the absence of kelp, other types of systems may persist, for example algal turf, coralline reefs or urchin barrens (Vergés et al. 2016). These other systems support a different array of fauna and flora and are considered less diverse and less productive than kelp forests (Dayton 1985, Connell et al. 2008, Byrnes et al. 2011). In future climate scenarios, species distributions are expected to shift poleward in response to changing ocean temperatures. Given kelps are cold-water species, changes in ocean temperatures, particularly warming, could have detrimental effects on their growth, survival, reproduction and recruitment.
+
+Other abiotic drivers such as light (Dayton et al. 1984, Bolton and Levitt 1985, Dieck 1993, Sjøtun et al. 2006, Wernberg and Goldberg 2008), sedimentation (Duggins et al. 1990, Vadas et al. 1992, Schiel and Foster 2006, Schiel et al. 2006) and water motion (Hurd 2000, Kawamata 2001, Mudge and Scrosati 2003, Scrosati and Mudge 2004, Wernberg and Goldberg 2008, Pedersen et al. 2012) have been shown to be important in the settlement, growth, and survival of kelp and biotic variables (e.g. see Black 1976, Kennelly 1983, Dayton et al. 1984, Harris et al. 1984, Carpenter 1990, Sivertsen 2006, Harley et al. 2012) play an equally important role in structuring kelp communities, through alteration in top-down and bottom-up control mechanisms (Breen and Mann 1976, Duggins 1980, Harris et al. 1984, Estes and Duggins 1995, Shears and Babcock 2002, Arkema et al. 2009, Blamey and Branch 2012).
+
+Kelp forest structure can be influenced by a variety of factors that ultimately determine the size frequency distribution of individuals and their spatially and temporarily variability. Much of the past research on kelp population structure focuses on the different variables that may affect kelp recruitment. It is generally accepted that most kelps rely on a ‘recruitment window’; a time when environmental factors are favourable for spore release and growth (Deysher and Dean 1986); however, other factors such as temperature, nutrients, light, wave motion, substratum, sedimentation, grazing etc. may also be important in the settlement and growth of spores, even during optimal recruiting conditions (Devinny and Volse 1978, Dayton 1985, Deysher and Dean 1986a, 1986b, Vadas et al. 1992, Kawamata 2001, Taylor and Schiel 2003, Schiel et al. 2006, Rothäusler et al. 2009, Staehr and Wernberg 2009, Wernberg et al. 2011, Gaitán-Espitia et al. 2014, Franco et al. 2015).
+
+### The South African context
+
+_Ecklonia maxima_ a large canopy-forming kelp that dominates shallow temperate reefs off South Africa, particularly along the southern part of the west and the south-west coasts (Bolton and Stegenga 2002). The south-west coast is considered a transition zone between the cool-temperate west coast and warm-temperate south coast and is characteristic of a rapid change in ocean temperature as well as an overlap in species composition between the two coasts (Bolton and Stegenga 2002). Kelp forests on the west coast north of Cape Point are largely dominated by rock lobsters Jasus lalandii, filter-feeders (including the mussels Choromytilus meridionalis Krauss, and Aulomya ater Molina) and red understory seaweeds (Field and Clark 1976, Field et al. 1980a, Leliaert et al. 2000, Levitt et al. 2002). Kelp forests east of Cape Point are grazer dominated (Anderson et al. 1997, 2006, Leliaert et al. 2000) and understory algae include a mixture of Ochrophyta, Chlorophyta and to a lesser extent Rhodophyta. These differences have been attributed largely to temperature but factors such as light, water motion, depth and grazer abundance may also play a role (Velimirov et al. 1977, Field et al. 1980, Leliaert et al. 2000, Bolton and Stegenga 2002, Levitt et al. 2002). East of False Bay, kelp ecosystems have recently undergone a shift in benthic communities because of an increase in abundance of _J. lalandii_, a well-known predator of benthic herbivores including the urchin Parechinus angulosus (Blamey et al. 2010, Blamey and Branch 2012).
+
+The sea urchin _P. angulosus_ is the dominant herbivore in South African kelp forests along the south-west coast (Velimirov et al. 1977, Field et al. 1980, Leliaert et al. 2000) however, turbulent waters and its small size prevent it from feeding on adult kelps. I Instead the urchin is restricted to feeding mostly on kelp detritus, but also on juvenile kelps (Fricke 1979, Day and Branch 2002). The abalone Haliotis midae is also a notable herbivore in this ecosystem, but it too feeds predominantly on kelp detritus (Tarr et al. 1996, Mayfield and Branch 2000). This abalone is closely associated with P. angulosus, whereby juvenile abalone take refuge beneath urchin spines (Day and Branch 2000a, 2000b, Mayfield and Branch 2000).The west coast rock lobster _J. lalandii_ is known for its role in maintaining alternative stable states (Barkai and Branch 1988) and is a major predator of both P. angulosus and juvenile H. midae (Mayfield et al. 2001, Blamey and Branch 2012), particularly east of Cape Point where subtidal mussel beds are scarce. In the early 1990s, J. lalandii expanded its distribution east of False Bay (Cockcroft et al. 2008). Following the ‘invasion’ of rock lobsters, herbivore numbers declined significantly, most likely as a result of direct lobster predation, which resulted in an increased abundance of macroalgae and sessile invertebrates (Blamey et al. 2010, Blamey and Branch 2012). This suggests that the invasion of J. lalandii into these areas has resulted in the establishment of an alternative stable-state (Blamey and Branch 2012) and is an excellent example of the role that predators can play in transforming the structure and functioning of ecosystems, without directly disturbing kelp themselves.
+
+Population structure of _E. maxima_ may depend on a variety of factors such as temperature(Lee and Brinkhuis 1988, Raven and Geider 1988, Wiencke 1989, Dieck 1993, Connell and Russell 2010, Bartsch et al. 2012, Mabin et al. 2013), light (Lee and Brinkhuis 1988, Altamirano and Murakami 2004, Wernberg and Goldberg 2008, Arkema et al. 2009, Tait 2014), wave motion (Graham et al. 1997a, Kawamata 2001, Wernberg 2005, Fowler-Walker et al. 2006, Pedersen et al. 2012) and nutrients (Jackson 1977, Andrews and Hutchings 1980, Field et al. 1980b, Probyn and McQuaid 1985, Guimaraes and Coutinho 1996, Edwards and Estes 2006). At shallow depths (2–3m), the canopy tends to reach the surface; however, the structure changes to a mixture of sub-canopy and canopy at greater depths (5–10m), with eventual transition into L. pallida dominated canopy (>10m) (Rothman et al. 2006, 2010). Therefore, from the surface it may appear that there is a change in biomass due to reduction in canopy cover with depth; however, due to the presence of sub-canopy kelps at deeper depths the biomass changes insignificantly (Rothman et al. 2006). Populations of E. maxima dominate the west coast, but more recently have increased in density in False Bay and further east (Reimers 2012), extending their range by 70km along the south coast (Bolton et al. 2012). The range extension of E. maxima has been associated with a possible cooling and increased nutrient supply in the nearshore around the South African south-west coast (Moloney et al. 2005, Blamey et al. 2015b).
+
+In South African kelp forests the effects of grazing on macroalgal communities may be considered insignificant relative to northern hemisphere regions, given that the urchin P. angulosus feeds mostly on drift kelp, but is known to also feed on juvenile or early developmental stages of kelp (Fricke 1979), which have been shown to obtain refuge in kelp holdfasts (Anderson et al. 1997). Studies by Day and Branch (2000; 2002) have shown the importance of P. angulosus in sheltering juvenile Haliotis midae and have shown the urchin to be a selective forager (Anderson and Velimirov 1982).Much of the past research on South African kelps has focused on kelp population dynamics in relation to different harvesting techniques, and the effects of temperature on physiology, growth, function and distribution. Research on kelp ecosystems have focused on understanding energy flow in this system and associated benthic community structures, as well as species interactions between key species. However, there is no recent work investigating differences in benthic species composition between kelp beds presenting contrasting temperature regimes and presence/absence of key predators. Given that temperature is a major driver of species distributions, this study offers a unique opportunity to investigate if kelp forest benthic species composition differs between cooler and warmer areas, and in the presence/absence of _J. lalandii_.
+
+### Sites
+
+The South African coastline has been catergorised into three marine provinces. These marine provinces are determined by temperature regimes and the resulting distribution of benthic fauna and flora. The west coast is characterised by cool water which extends as far north as Namibia, and is often referred to as the Benguela Marine Province with its southern limit around Cape Point. The annual mean temperature for areas along the west coast are generally between 12–14°C. However, there are rapid and wide temperature changes during periods of upwelling that may persist for days at a time. Due to the upwelling, nutrient concentrations are also more abundant in this region compared to regions outside of the influence of the Benguela Current. The west coast region has been termed as ‘cool-temperate’ region, which is defined as a region where mean monthly temperatures are always above 10°C and always below 15°C (Smit et al. 2013). East of Cape Point marks the beginning of an overlap or transition area, which is also referred to as the Benguela-Agulhas Transition Zone (Smit et al. 2013). This area is comprised of seaweed species representative of the Benguela Marine Province and the Agulhas Marine Province, which starts east of Cape Agulhas (Smit et al. 2013). The Agulhas Marine Province is characterised by a wide temperature range of up to 7°C difference between mean monthly temperatures between summer and winter (Smit et al. 2013). The study sites selected for this research are present within the Benguela Marine Province and the Benguela-Agulhas Transition Zone.
+
+Oudekraal (Figure 2.1) is within the Benguela Marine Province and experiences the cold ocean temperatures and a higher nutrient flux typical of upwelling systems (Blamey et al. 2015a, Smit et al. 2016) . Max temperatures of 18°C and 12°C are experienced in the summer and winter months respectively (Figure 2.2) (Schlegel et al. 2017). Bordjies Reef is just north of Cape Point, inside False Bay, and falls within the transition zone between the cool-temperate west and warm-temperate south coasts. This latter site is substantially warmer because it is characterised by reduced upwelling as well as a greater annual thermal variability (max of 22.5°C and 18°C in the summer and winter months respectively) by virtue of it being influenced by upwelling from the Benguela Current and the warming influence of the Agulhas Current (Smit et al. 2016, Schlegel et al. 2017). Betty's Bay is east of False Bay, but still within the transition zone and is now characterised by a greater abundance of rock lobster and fewer grazers, following the lobster invasion in the early 1990s (Blamey et al. 2010). It has a maximum temperature of 21°C and 18°C in summer and winter respectively and is thus like that of Bordjies Reef in terms of its thermal regime (Schlegel et al. 2017).
+
+In terms of the topography, Oudekraal has a very heterogeneous topography due to the presence of large granite boulders. Bordjies Reef is a flat with small occasional rocky outcrops, while at Betty's Bay the kelps are located on reefs that are separated by kelp-free gullies.
+
+### Aim
+
+The aim of this study was to determine if contrasting temperature regimes and wave climate drive differences in _Ecklonia maxima_ populations and their associated benthos. This aim was met through the follwing objectives:
+1.Determine if kelp populations and their associated benthos are different within and between      sites
+2.Determine if temperature regime or wave climate is driving these potential differences
+3.Determine what temperature and wave climate parameters are contributing most to the differences
+
+## Methods
+### Data collection
+### Benthic 
+
+At each site, two 16m diameter circular plots within the middle of the kelp beds were selected. Each plot was approximately 200m2 in area. Long-term temperature loggers (StarOddi: Starmon mini) are located nearby at each site. Each plot was permanently marked with a 0.5 m railway bar placed in the center of the plot and a GPS position recorded. Sampling of the plots involved SCUBA divers attaching a transect line to the railway bar at the center of the plot and swimming out 8m along predetermined compass bearings. Rock lobsters and abalone were counted within 1m either side of the transect. On the return swim towards the center of the plot 0.5 × 0.5m quadrats were sampled at 1m and 4m along the transect. The percentage cover of sand, rock, foliose algae, encrusting coralline algae, sponge, mussel and silt were estimated and recorded. Larger invertebrates such as abalone and rock lobster were counted and recorded 1m either side of the transect line. All other species encountered within the quadrats, except adult kelp and larger invertebrates mentioned above, were then scraped off, placed in collecting bags, and taken back to the laboratory where they were identified and weighed (wet and dry mass in grams). These steps were repeated on four different compass bearings giving: (1) a total of eight (0.5 × 0.5m) quadrats sampled for each of the two plot (i.e. 16 quadrats per site); and (2) a total of four 8m transects for each of the two plots for the rock lobster and abalone counts. Given the abundance of urchins at some sites, a mean biomass estimate was obtained for this species. This was achieved through collecting 50 individuals of P. angulosus, which were then oven dried, weighed and mean biomass calculated. Biological material in collecting bags, taken from the quadrats, were transferred to plastic sample bags. Back in the laboratory all samples were frozen at -20°C for later identification. All biological material were identified as far as possible to species and their wet and oven dry mass were measured and recorded.
+
+### Kelp population
+
+
+
+### Statisical analyses
+
+All data analyses were done using the R software (R Core Team, 2016), and the vegan package (Oksanen et al. 2016) and ggplot2 (Wickham 2009). The Shapiro-Wilk normality test was run before any analyses to investigate the distribution of the data. All benthic data were first 4th root transformed before any analyses were run to down-weigh species that had high biomass values and low abundance values, as this may have affected the ordination analysis. The transformed data was then used to generate a Bray-Curtis similarity matrix.
+
+### Abiotic parameters
+
+\newpage
+## Results
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+
+flora_df <- read.csv(file = "data/flora.csv", check.names = FALSE)
+fauna_df <- read.csv(file = "data/fauna.csv", check.names = FALSE)
+benthic <- read.csv(file = "data/benthic.csv", check.names = FALSE)
+cover_df <- read.csv(file = "data/cover.csv", check.names = FALSE)
+kelp_df <- read.csv(file = "data/kelp.csv", check.names = FALSE)
+
+```
+
+### Diversity
+
+```{r}
+
+flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
+
+plot_flora <- ggplot(data = flora_lng, aes(x=id, y=species, colour = site, size =biomass)) +                   geom_point() + 
+              theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
+              theme(panel.background = element_rect(fill = 'grey', colour = 'grey')) +
+              ylab("Species") + 
+              xlab("ID")
+
+fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
+              
+plot_fauna <- ggplot(data = fauna_lng, aes(x=id, y=species, colour = site, size =biomass)) +                   geom_point() + 
+              theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
+              theme(panel.background = element_rect(fill = 'grey', colour = 'grey')) +
+              ylab("Species") + 
+              xlab("ID")
+```
+
+ggplot(data = cover_long[which(cover_long$value>0),], aes(x=variable, y=value)) + geom_boxplot(notch = TRUE, varwidth = FALSE, aes(fill=Site), outlier.shape=NA, width = 0.3) + theme(axis.text.x=element_text(angle = 0, hjust = 0.5, vjust = 0.3)) + theme(panel.background = element_rect(fill = 'white', colour = 'grey'))+ xlab("") + ylab("%-cover") + ggtitle("") + scale_colour_brewer(palette = "Set2") + theme(aspect.ratio = 0.6) 
+
+
+
+
+
+
+
+

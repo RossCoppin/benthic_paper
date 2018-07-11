@@ -1,0 +1,238 @@
+site,plot,no,id,type,recruits,adults,length
+Bordjies Reef,Plot B1,B1,B1Q1,Canopy,45,5,320
+Bordjies Reef,Plot B1,B2,B1Q1,Canopy,45,5,340
+Bordjies Reef,Plot B1,B3,B1Q1,Canopy,45,5,345
+Bordjies Reef,Plot B1,B4,B1Q1,Canopy,45,5,330
+Bordjies Reef,Plot B1,B5,B1Q1,Canopy,45,5,310
+Bordjies Reef,Plot B1,B6,B1Q2,Canopy,13,5,310
+Bordjies Reef,Plot B1,B7,B1Q2,Sub-Canopy,13,5,51
+Bordjies Reef,Plot B1,B8,B1Q2,Canopy,13,5,340
+Bordjies Reef,Plot B1,B9,B1Q2,Canopy,13,5,340
+Bordjies Reef,Plot B1,B10,B1Q2,Canopy,13,5,330
+Bordjies Reef,Plot B1,B11,B1Q3,Recruits,9,0,0
+Bordjies Reef,Plot B1,B12,B1Q4,Canopy,35,3,253
+Bordjies Reef,Plot B1,B13,B1Q4,Sub-Canopy,35,3,150
+Bordjies Reef,Plot B1,B14,B1Q4,Sub-Canopy,35,3,280
+Bordjies Reef,Plot B1,B15,B1Q5,Sub-Canopy,17,8,276
+Bordjies Reef,Plot B1,B16,B1Q5,Canopy,17,8,332
+Bordjies Reef,Plot B1,B17,B1Q5,Sub-Canopy,17,8,284
+Bordjies Reef,Plot B1,B18,B1Q5,Sub-Canopy,17,8,210
+Bordjies Reef,Plot B1,B19,B1Q5,Canopy,17,8,305
+Bordjies Reef,Plot B1,B20,B1Q5,Canopy,17,8,356
+Bordjies Reef,Plot B1,B21,B1Q5,Sub-Canopy,17,8,212
+Bordjies Reef,Plot B1,B22,B1Q5,Canopy,17,8,305
+Bordjies Reef,Plot B1,B23,B1Q6,Recruits,2,0,0
+Bordjies Reef,Plot B1,B24,B1Q7,Canopy,72,4,313
+Bordjies Reef,Plot B1,B25,B1Q7,Canopy,72,4,325
+Bordjies Reef,Plot B1,B26,B1Q7,Sub-Canopy,72,4,295
+Bordjies Reef,Plot B1,B27,B1Q7,Canopy,72,4,342
+Bordjies Reef,Plot B1,B28,B1Q8,Canopy,27,1,351
+Bordjies Reef,Plot B2,B29,B2Q1,Canopy,24,4,350
+Bordjies Reef,Plot B2,B30,B2Q1,Canopy,24,4,300
+Bordjies Reef,Plot B2,B31,B2Q1,Canopy,24,4,340
+Bordjies Reef,Plot B2,B32,B2Q1,Canopy,24,4,335
+Bordjies Reef,Plot B2,B33,B2Q2,Recruits,6,0,0
+Bordjies Reef,Plot B2,B34,B2Q3,Sub-Canopy,28,4,53
+Bordjies Reef,Plot B2,B35,B2Q3,Canopy,28,4,360
+Bordjies Reef,Plot B2,B36,B2Q3,Canopy,28,4,345
+Bordjies Reef,Plot B2,B37,B2Q3,Canopy,28,4,370
+Bordjies Reef,Plot B2,B38,B2Q4,Canopy,42,7,300
+Bordjies Reef,Plot B2,B39,B2Q4,Canopy,42,7,360
+Bordjies Reef,Plot B2,B40,B2Q4,Canopy,42,7,320
+Bordjies Reef,Plot B2,B41,B2Q4,Canopy,42,7,320
+Bordjies Reef,Plot B2,B42,B2Q4,Canopy,42,7,300
+Bordjies Reef,Plot B2,B43,B2Q4,Sub-Canopy,42,7,210
+Bordjies Reef,Plot B2,B44,B2Q4,Sub-Canopy,42,7,280
+Bordjies Reef,Plot B2,B45,B2Q5,Recruits,11,0,0
+Bordjies Reef,Plot B2,B46,B2Q6,Sub-Canopy,12,4,64
+Bordjies Reef,Plot B2,B47,B2Q6,Sub-Canopy,12,4,101
+Bordjies Reef,Plot B2,B48,B2Q6,Sub-Canopy,12,4,128
+Bordjies Reef,Plot B2,B49,B2Q6,Sub-Canopy,12,4,137
+Bordjies Reef,Plot B2,B50,B2Q7,None,0,0,0
+Bordjies Reef,Plot B2,B51,B2Q8,Sub-Canopy,19,2,65
+Bordjies Reef,Plot B2,B52,B2Q8,Canopy,19,2,304
+Oudekraal,Plot O1,O1,O1Q1,Sub-Canopy,0,5,51
+Oudekraal,Plot O1,O2,O1Q1,Sub-Canopy,0,5,78
+Oudekraal,Plot O1,O3,O1Q1,Sub-Canopy,0,5,56
+Oudekraal,Plot O1,O4,O1Q1,Sub-Canopy,0,5,51
+Oudekraal,Plot O1,O5,O1Q1,Sub-Canopy,0,5,53
+Oudekraal,Plot O1,O6,O1Q2,Sub-Canopy,0,3,450
+Oudekraal,Plot O1,O7,O1Q2,Sub-Canopy,0,3,175
+Oudekraal,Plot O1,O8,O1Q2,Canopy,0,3,576
+Oudekraal,Plot O1,O9,O1Q3,Canopy,0,0,557
+Oudekraal,Plot O1,O10,O1Q3,Canopy,0,0,519
+Oudekraal,Plot O1,O11,O1Q3,None,0,0,0
+Oudekraal,Plot O1,O12,O1Q3,None,0,0,0
+Oudekraal,Plot O1,O13,O1Q4,Canopy,0,11,526
+Oudekraal,Plot O1,O14,O1Q4,Canopy,0,11,543
+Oudekraal,Plot O1,O15,O1Q4,Sub-Canopy,0,11,470
+Oudekraal,Plot O1,O16,O1Q4,Canopy,0,11,517
+Oudekraal,Plot O1,O17,O1Q4,Sub-Canopy,0,11,416
+Oudekraal,Plot O1,O18,O1Q4,Sub-Canopy,0,11,151
+Oudekraal,Plot O1,O19,O1Q4,Sub-Canopy,0,11,450
+Oudekraal,Plot O1,O20,O1Q4,Canopy,0,11,515
+Oudekraal,Plot O1,O21,O1Q4,Sub-Canopy,0,11,231
+Oudekraal,Plot O1,O22,O1Q4,Sub-Canopy,0,11,105
+Oudekraal,Plot O1,O23,O1Q4,Sub-Canopy,0,11,487
+Oudekraal,Plot O1,O24,O1Q5,Sub-Canopy,1,7,127
+Oudekraal,Plot O1,O25,O1Q5,Sub-Canopy,1,7,82
+Oudekraal,Plot O1,O26,O1Q5,Canopy,1,7,535
+Oudekraal,Plot O1,O27,O1Q5,Canopy,1,7,505
+Oudekraal,Plot O1,O28,O1Q5,Sub-Canopy,1,7,152
+Oudekraal,Plot O1,O29,O1Q5,Sub-Canopy,1,7,72
+Oudekraal,Plot O1,O30,O1Q5,Sub-Canopy,1,7,54
+Oudekraal,Plot O1,O31,O1Q5,Recruits,1,7,0
+Oudekraal,Plot O1,O32,O1Q5,Recruits,1,7,0
+Oudekraal,Plot O1,O33,O1Q5,Recruits,1,7,0
+Oudekraal,Plot O1,O34,O1Q5,Recruits,1,7,0
+Oudekraal,Plot O1,O35,O1Q6,Sub-Canopy,5,6,55
+Oudekraal,Plot O1,O36,O1Q6,Sub-Canopy,5,6,73
+Oudekraal,Plot O1,O37,O1Q6,Canopy,5,6,556
+Oudekraal,Plot O1,O38,O1Q6,Canopy,5,6,570
+Oudekraal,Plot O1,O39,O1Q6,Sub-Canopy,5,6,154
+Oudekraal,Plot O1,O40,O1Q6,Sub-Canopy,5,6,470
+Oudekraal,Plot O1,O41,O1Q6,Recruits,5,6,0
+Oudekraal,Plot O1,O42,O1Q7,Sub-Canopy,3,5,262
+Oudekraal,Plot O1,O43,O1Q7,Sub-Canopy,3,5,302
+Oudekraal,Plot O1,O44,O1Q7,Sub-Canopy,3,5,142
+Oudekraal,Plot O1,O45,O1Q7,Sub-Canopy,3,5,202
+Oudekraal,Plot O1,O46,O1Q7,Sub-Canopy,3,5,464
+Oudekraal,Plot O1,O47,O1Q8,Sub-Canopy,7,13,421
+Oudekraal,Plot O1,O48,O1Q8,Sub-Canopy,7,13,423
+Oudekraal,Plot O1,O49,O1Q8,Sub-Canopy,7,13,494
+Oudekraal,Plot O1,O50,O1Q8,Sub-Canopy,7,13,205
+Oudekraal,Plot O1,O51,O1Q8,Canopy,7,13,511
+Oudekraal,Plot O1,O52,O1Q8,Canopy,7,13,539
+Oudekraal,Plot O1,O53,O1Q8,Canopy,7,13,508
+Oudekraal,Plot O1,O54,O1Q8,Canopy,7,13,532
+Oudekraal,Plot O1,O55,O1Q8,Canopy,7,13,600
+Oudekraal,Plot O1,O56,O1Q8,Sub-Canopy,7,13,380
+Oudekraal,Plot O1,O57,O1Q8,Sub-Canopy,7,13,125
+Oudekraal,Plot O1,O58,O1Q8,Sub-Canopy,7,13,56
+Oudekraal,Plot O1,O59,O1Q8,Sub-Canopy,7,13,76
+Oudekraal,Plot O2,O60,O2Q1,Sub-Canopy,0,4,116
+Oudekraal,Plot O2,O61,O2Q1,Sub-Canopy,0,4,295
+Oudekraal,Plot O2,O62,O2Q1,Sub-Canopy,0,4,209
+Oudekraal,Plot O2,O63,O2Q1,Sub-Canopy,0,4,299
+Oudekraal,Plot O2,O64,O2Q2,Sub-Canopy,0,1,65
+Oudekraal,Plot O2,O65,O2Q3,Sub-Canopy,0,11,53
+Oudekraal,Plot O2,O66,O2Q3,Sub-Canopy,0,11,62
+Oudekraal,Plot O2,O67,O2Q3,Sub-Canopy,0,11,64
+Oudekraal,Plot O2,O68,O2Q3,Canopy,0,11,610
+Oudekraal,Plot O2,O69,O2Q3,Sub-Canopy,0,11,53
+Oudekraal,Plot O2,O70,O2Q3,Sub-Canopy,0,11,450
+Oudekraal,Plot O2,O71,O2Q3,Sub-Canopy,0,11,440
+Oudekraal,Plot O2,O72,O2Q3,Sub-Canopy,0,11,448
+Oudekraal,Plot O2,O73,O2Q3,Canopy,0,11,520
+Oudekraal,Plot O2,O74,O2Q3,Canopy,0,11,570
+Oudekraal,Plot O2,O75,O2Q3,Sub-Canopy,0,11,198
+Oudekraal,Plot O2,O76,O2Q4,Canopy,3,1,596
+Oudekraal,Plot O2,O77,O2Q4,Recruits,3,1,0
+Oudekraal,Plot O2,O78,O2Q5,Sub-Canopy,32,5,80
+Oudekraal,Plot O2,O79,O2Q5,Sub-Canopy,32,5,56
+Oudekraal,Plot O2,O80,O2Q5,Sub-Canopy,32,5,63
+Oudekraal,Plot O2,O81,O2Q5,Sub-Canopy,32,5,104
+Oudekraal,Plot O2,O82,O2Q5,Sub-Canopy,32,5,388
+Oudekraal,Plot O2,O83,O2Q6,Sub-Canopy,4,9,152
+Oudekraal,Plot O2,O84,O2Q6,Sub-Canopy,4,9,53
+Oudekraal,Plot O2,O85,O2Q6,Sub-Canopy,4,9,74
+Oudekraal,Plot O2,O86,O2Q6,Sub-Canopy,4,9,400
+Oudekraal,Plot O2,O87,O2Q6,Sub-Canopy,4,9,108
+Oudekraal,Plot O2,O88,O2Q6,Sub-Canopy,4,9,57
+Oudekraal,Plot O2,O89,O2Q6,Sub-Canopy,4,9,51
+Oudekraal,Plot O2,O90,O2Q6,Canopy,4,9,557
+Oudekraal,Plot O2,O91,O2Q6,Sub-Canopy,4,9,438
+Oudekraal,Plot O2,O92,O2Q7,Sub-Canopy,5,9,61
+Oudekraal,Plot O2,O93,O2Q7,Sub-Canopy,5,9,51
+Oudekraal,Plot O2,O94,O2Q7,Sub-Canopy,5,9,53
+Oudekraal,Plot O2,O95,O2Q7,Sub-Canopy,5,9,54
+Oudekraal,Plot O2,O96,O2Q7,Sub-Canopy,5,9,83
+Oudekraal,Plot O2,O97,O2Q7,Sub-Canopy,5,9,53
+Oudekraal,Plot O2,O98,O2Q7,Sub-Canopy,5,9,53
+Oudekraal,Plot O2,O99,O2Q7,Sub-Canopy,5,9,54
+Oudekraal,Plot O2,O100,O2Q7,Sub-Canopy,5,9,51
+Oudekraal,Plot O2,O101,O2Q7,Sub-Canopy,5,9,58
+Oudekraal,Plot O2,O102,O2Q8,Sub-Canopy,13,13,94
+Oudekraal,Plot O2,O103,O2Q8,Sub-Canopy,13,13,166
+Oudekraal,Plot O2,O104,O2Q8,Sub-Canopy,13,13,377
+Oudekraal,Plot O2,O105,O2Q8,Sub-Canopy,13,13,313
+Oudekraal,Plot O2,O106,O2Q8,Sub-Canopy,13,13,105
+Oudekraal,Plot O2,O107,O2Q8,Sub-Canopy,13,13,141
+Oudekraal,Plot O2,O108,O2Q8,Sub-Canopy,13,13,82
+Oudekraal,Plot O2,O109,O2Q8,Sub-Canopy,13,13,58
+Oudekraal,Plot O2,O110,O2Q8,Sub-Canopy,13,13,52
+Oudekraal,Plot O2,O111,O2Q8,Sub-Canopy,13,13,195
+Oudekraal,Plot O2,O112,O2Q8,Sub-Canopy,13,13,58
+Oudekraal,Plot O2,O113,O2Q8,Sub-Canopy,13,13,410
+Oudekraal,Plot O2,O114,O2Q8,Sub-Canopy,13,13,205
+Betty's Bay,Plot Y1,Y1,Y1Q1,Canopy,0,7,750
+Betty's Bay,Plot Y1,Y2,Y1Q1,Canopy,0,7,650
+Betty's Bay,Plot Y1,Y3,Y1Q1,Canopy,0,7,601
+Betty's Bay,Plot Y1,Y4,Y1Q1,Canopy,0,7,720
+Betty's Bay,Plot Y1,Y5,Y1Q1,Sub-Canopy,0,7,520
+Betty's Bay,Plot Y1,Y6,Y1Q1,Sub-Canopy,0,7,560
+Betty's Bay,Plot Y1,Y7,Y1Q1,Canopy,0,7,653
+Betty's Bay,Plot Y1,Y8,Y1Q2,Canopy,0,3,643
+Betty's Bay,Plot Y1,Y9,Y1Q2,Canopy,0,3,620
+Betty's Bay,Plot Y1,Y10,Y1Q2,Canopy,0,3,678
+Betty's Bay,Plot Y1,Y11,Y1Q3,Canopy,0,2,633
+Betty's Bay,Plot Y1,Y12,Y1Q3,Canopy,0,2,642
+Betty's Bay,Plot Y1,Y13,Y1Q4,Canopy,0,10,707
+Betty's Bay,Plot Y1,Y14,Y1Q4,Canopy,0,10,630
+Betty's Bay,Plot Y1,Y15,Y1Q4,Canopy,0,10,607
+Betty's Bay,Plot Y1,Y16,Y1Q4,Canopy,0,10,675
+Betty's Bay,Plot Y1,Y17,Y1Q4,Canopy,0,10,636
+Betty's Bay,Plot Y1,Y18,Y1Q4,Sub-Canopy,0,10,550
+Betty's Bay,Plot Y1,Y19,Y1Q4,Canopy,0,10,729
+Betty's Bay,Plot Y1,Y20,Y1Q4,Canopy,0,10,677
+Betty's Bay,Plot Y1,Y21,Y1Q4,Canopy,0,10,750
+Betty's Bay,Plot Y1,Y22,Y1Q4,Sub-Canopy,0,10,507
+Betty's Bay,Plot Y1,Y23,Y1Q5,Sub-Canopy,0,4,583
+Betty's Bay,Plot Y1,Y24,Y1Q5,Sub-Canopy,0,4,564
+Betty's Bay,Plot Y1,Y25,Y1Q5,Canopy,0,4,614
+Betty's Bay,Plot Y1,Y26,Y1Q5,Canopy,0,4,612
+Betty's Bay,Plot Y1,Y27,Y1Q6,Canopy,0,8,600
+Betty's Bay,Plot Y1,Y28,Y1Q6,Sub-Canopy,0,8,574
+Betty's Bay,Plot Y1,Y29,Y1Q6,Sub-Canopy,0,8,590
+Betty's Bay,Plot Y1,Y30,Y1Q6,Sub-Canopy,0,8,533
+Betty's Bay,Plot Y1,Y31,Y1Q6,Sub-Canopy,0,8,566
+Betty's Bay,Plot Y1,Y32,Y1Q6,Canopy,0,8,646
+Betty's Bay,Plot Y1,Y33,Y1Q6,Sub-Canopy,0,8,561
+Betty's Bay,Plot Y1,Y34,Y1Q6,Canopy,0,8,648
+Betty's Bay,Plot Y1,Y35,Y1Q7,Sub-Canopy,0,13,523
+Betty's Bay,Plot Y1,Y36,Y1Q7,Sub-Canopy,0,13,596
+Betty's Bay,Plot Y1,Y37,Y1Q7,Sub-Canopy,0,13,557
+Betty's Bay,Plot Y1,Y38,Y1Q7,Canopy,0,13,605
+Betty's Bay,Plot Y1,Y39,Y1Q7,Sub-Canopy,0,13,523
+Betty's Bay,Plot Y1,Y40,Y1Q7,Canopy,0,13,605
+Betty's Bay,Plot Y1,Y41,Y1Q7,Sub-Canopy,0,13,571
+Betty's Bay,Plot Y1,Y42,Y1Q7,Sub-Canopy,0,13,578
+Betty's Bay,Plot Y1,Y43,Y1Q7,Sub-Canopy,0,13,581
+Betty's Bay,Plot Y1,Y44,Y1Q7,Sub-Canopy,0,13,587
+Betty's Bay,Plot Y1,Y45,Y1Q7,Canopy,0,13,656
+Betty's Bay,Plot Y1,Y46,Y1Q7,Sub-Canopy,0,13,562
+Betty's Bay,Plot Y1,Y47,Y1Q7,Sub-Canopy,0,13,562
+Betty's Bay,Plot Y1,Y48,Y1Q8,Sub-Canopy,0,4,562
+Betty's Bay,Plot Y1,Y49,Y1Q8,Sub-Canopy,0,4,577
+Betty's Bay,Plot Y1,Y50,Y1Q8,Sub-Canopy,0,4,555
+Betty's Bay,Plot Y1,Y51,Y1Q8,Sub-Canopy,0,4,587
+Betty's Bay,Plot Y2,Y52,Y2Q1,Canopy,0,4,605
+Betty's Bay,Plot Y2,Y53,Y2Q1,Sub-Canopy,0,4,570
+Betty's Bay,Plot Y2,Y54,Y2Q1,Canopy,0,4,700
+Betty's Bay,Plot Y2,Y55,Y2Q1,Canopy,0,4,749
+Betty's Bay,Plot Y2,Y56,Y2Q2,Canopy,0,4,670
+Betty's Bay,Plot Y2,Y57,Y2Q3,Canopy,0,1,715
+Betty's Bay,Plot Y2,Y58,Y2Q4,Canopy,0,1,720
+Betty's Bay,Plot Y2,Y59,Y2Q5,Sub-Canopy,0,4,540
+Betty's Bay,Plot Y2,Y60,Y2Q5,Canopy,0,4,637
+Betty's Bay,Plot Y2,Y61,Y2Q5,Canopy,0,4,642
+Betty's Bay,Plot Y2,Y62,Y2Q5,Canopy,0,4,643
+Betty's Bay,Plot Y2,Y63,Y2Q6,Canopy,0,3,688
+Betty's Bay,Plot Y2,Y64,Y2Q6,Canopy,0,3,665
+Betty's Bay,Plot Y2,Y65,Y2Q6,Canopy,0,3,686
+Betty's Bay,Plot Y2,Y66,Y2Q7,Canopy,0,3,672
+Betty's Bay,Plot Y2,Y67,Y2Q7,Canopy,0,3,673
+Betty's Bay,Plot Y2,Y68,Y2Q7,Canopy,0,3,694
+Betty's Bay,Plot Y2,Y69,Y2Q8,Canopy,0,3,712
+Betty's Bay,Plot Y2,Y70,Y2Q8,Canopy,0,3,701
+Betty's Bay,Plot Y2,Y71,Y2Q8,Canopy,0,3,702
