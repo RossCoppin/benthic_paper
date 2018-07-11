@@ -26,6 +26,7 @@ library(tidyverse)
 library(vegan)
 library(ggplot2)
 library(reshape2)
+library(gridExtra)
 
 ```
 
@@ -94,7 +95,7 @@ kelp_df <- read.csv(file = "data/kelp.csv", check.names = FALSE)
 
 ### Diversity
 
-```{r}
+```{r diversity graphs script, message=FALSE, warning=FALSE, paged.print=FALSE}
 
 flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
 
@@ -111,9 +112,10 @@ plot_fauna <- ggplot(data = fauna_lng, aes(x=id, y=species, colour = site, size 
               theme(panel.background = element_rect(fill = 'grey', colour = 'grey')) +
               ylab("Species") + 
               xlab("ID")
-```
 
-ggplot(data = cover_long[which(cover_long$value>0),], aes(x=variable, y=value)) + geom_boxplot(notch = TRUE, varwidth = FALSE, aes(fill=Site), outlier.shape=NA, width = 0.3) + theme(axis.text.x=element_text(angle = 0, hjust = 0.5, vjust = 0.3)) + theme(panel.background = element_rect(fill = 'white', colour = 'grey'))+ xlab("") + ylab("%-cover") + ggtitle("") + scale_colour_brewer(palette = "Set2") + theme(aspect.ratio = 0.6) 
+ggsave("figures/fig1.png", grid.arrange(plot_flora, plot_fauna))
+grid.arrange(plot_flora, plot_fauna, ncol=1)
+```
 
 
 
