@@ -26,7 +26,7 @@ library(tidyverse)
 library(vegan)
 library(ggplot2)
 library(reshape2)
-library(gridExtra)
+library(ggpubr)
 
 ```
 
@@ -87,41 +87,48 @@ All data analyses were done using the R software (R Core Team, 2016), and the ve
 
 flora_df <- read.csv(file = "data/flora.csv", check.names = FALSE)
 fauna_df <- read.csv(file = "data/fauna.csv", check.names = FALSE)
+fauna_df <- fauna_df[ ,c(1:27)]
 benthic <- read.csv(file = "data/benthic.csv", check.names = FALSE)
 cover_df <- read.csv(file = "data/cover.csv", check.names = FALSE)
 kelp_df <- read.csv(file = "data/kelp.csv", check.names = FALSE)
-urchin_df <- fauna_df[ , 28]
-  
-flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
+
+flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species") 
+fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
 
 ```
 
 ### Diversity
 
-```{r diversity graphs script, message=FALSE, warning=FALSE, paged.print=FALSE}
+Diveristy of flora was...
 
-plot_flora <- ggplot(data = flora_lng, aes(x=id, y=species, colour = site, size =biomass)) +                   geom_point() + 
-              theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'grey', colour = 'grey')) +
-              ylab("Species") + 
-              xlab("ID")
+```{r diversity fauna script, message=FALSE, warning=FALSE, paged.print=FALSE}
 
-fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
-              
-plot_fauna <- ggplot(data = fauna_lng, aes(x=site, y=biomass, colour = species)) +                             stat_summary(geom = "pointrange", data = fauna_lng) + 
+plot_flora <- ggplot(data = flora_lng, aes(x = species, y= biomass, fill = site)) + 
+              geom_bar(stat = "identity", show.legend = FALSE, position=position_dodge()) + 
               theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'grey', colour = 'grey')) +
-              ylab("") + 
+              theme(panel.background = element_rect(fill = 'grey', colour = 'black')) +
+              ylab("Flora") + 
               xlab("") +
               coord_flip()
-grid.arrange(plot_flora, plot_fauna)
-
 ```
-+ stat_summary(fun.y="sum", geom="point")
-levels(droplevels(subdf$letters))
 
+Diveristy of fauna was...
 
+```{r}
 
+plot_fauna <- ggplot(data = fauna_lng, aes(x = species, y= biomass, fill = site)) + 
+              geom_bar(stat = "identity", show.legend = FALSE ,position=position_dodge(),
+              size=.3) + 
+              theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
+              theme(panel.background = element_rect(fill = 'grey', colour = 'black')) +
+              ylab("Fauna") + 
+              xlab("") +
+              coord_flip()
+```
+
+```{r biomass barplot, message=FALSE, warning=FALSE, paged.print=FALSE}
+ggarrange(plot_flora, plot_fauna)
+```
 
 
 
