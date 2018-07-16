@@ -106,28 +106,28 @@ Diveristy of flora was...
 plot_flora <- ggplot(data = flora_lng, aes(x = species, y= biomass, fill = site)) + 
               geom_bar(stat = "identity", show.legend = FALSE, position=position_dodge()) + 
               theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'grey', colour = 'black')) +
-              ylab("Flora") + 
+              theme(panel.background = element_rect(fill = 'white', colour = 'white')) +
+              ylab("") + 
               xlab("") +
               coord_flip()
 ```
 
-Diveristy of fauna was...
+Diveristy of fauna was.....
 
 ```{r}
 
 plot_fauna <- ggplot(data = fauna_lng, aes(x = species, y= biomass, fill = site)) + 
-              geom_bar(stat = "identity", show.legend = FALSE ,position=position_dodge(),
+              geom_bar(stat = "identity", show.legend = TRUE ,position=position_dodge(),
               size=.3) + 
               theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'grey', colour = 'black')) +
-              ylab("Fauna") + 
+              theme(panel.background = element_rect(fill = 'white', colour = 'white')) +
+              ylab("") + 
               xlab("") +
               coord_flip()
 ```
 
-```{r biomass barplot, message=FALSE, warning=FALSE, paged.print=FALSE}
-ggarrange(plot_flora, plot_fauna)
+```{r biomass barplot, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap='Comparison of raw biomass species data between sites. Graph A represents flora and graph B represents fauna.'}
+ggarrange(plot_flora, plot_fauna, ncol = 2, nrow = 1, labels = "AUTO", legend = "bottom", common.legend = TRUE)
 ```
 
 
