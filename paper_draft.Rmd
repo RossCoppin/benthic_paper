@@ -23,8 +23,11 @@ library(tidyverse)
 library(vegan)
 library(ggplot2)
 library(reshape2)
+library(vegan)
+library(gridExtra)
+library(lubridate)
+library(GGally)
 library(ggpubr)
-
 ```
 
 ## Introduction
@@ -85,20 +88,21 @@ All data analyses were done using the R software (R Core Team, 2016), and the ve
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 
-flora_df <- read.csv(file = "data/flora.csv", check.names = FALSE)
-fauna_df <- read.csv(file = "data/fauna.csv", check.names = FALSE)
 benthic <- read.csv(file = "data/benthic.csv", check.names = FALSE)
 cover_df <- read.csv(file = "data/cover.csv", check.names = FALSE)
 kelp_df <- read.csv(file = "data/kelp.csv", check.names = FALSE)
-
-flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species") 
-fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
 
 ```
 
 ### Species composition
 
-```{r diversity fauna script, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap='Comparison of raw biomass species data between sites. Graph A represents flora and graph B represents fauna.'}
+```{r message=FALSE, warning=FALSE}
+
+flora_df <- read.csv(file = "data/flora.csv", check.names = FALSE)
+fauna_df <- read.csv(file = "data/fauna.csv", check.names = FALSE)
+
+flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species") 
+fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
 
 plot_flora <- ggplot(data = flora_lng, aes(x = species, y= biomass, fill = site)) + 
               geom_bar(stat = "identity", show.legend = FALSE,                                    position=position_dodge()) + 
@@ -116,37 +120,23 @@ plot_fauna <- ggplot(data = fauna_lng, aes(x = species, y= biomass, fill = site)
               ylab("") + 
               xlab("") +
               coord_flip()
+```
+
+```{r, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap='Comparison of raw biomass species data between sites. Graph A represents flora and graph B represents fauna.'}
+
 
 ggarrange(plot_flora, plot_fauna, ncol = 2, nrow = 1, labels = "AUTO", legend = "bottom", common.legend = TRUE, align = "none", heights = c(1.5,1))
-
 ```
 
 ## MDS
 
-```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 
-flora_mds <-  read.csv(file = "data/flora.csv", row.names = 'id', sep = ",", header = TRUE) 
-site  <- flora_mds$site
-flora_mds <- subset(flora_mds,select=-c(site))
 
-flora_log <- decostand(flora_mds, method='log') # Log-transform data, accounts for possible over-estimate of species with a large biomass but low abundance
-dist1<-vegdist(flora_log, method='bray')
-nmds1 <- metaMDSiter(dist1,k=2)
+## Temperature
 
-nmds1_plot <- plot(nmds1, type = "p")
 
-fauna_mds <-  read.csv(file = "data/fauna.csv", row.names = 'id', sep = ",", header = TRUE) 
-site  <- fauna_mds$site
-fauna_mds <- subset(fauna_mds,select=-c(site))
-fauna_mds <- fauna_mds[which(rowSums(fauna_mds) > 0),]
 
-fauna_log <- decostand(fauna_mds, method='range', na.rm = TRUE) # Log-transform data, accounts for possible over-estimate of species with a large biomass but low abundance
-dist2<-vegdist(fauna_mds, method='bray')
-nmds2 <- metaMDS(dist2, k = 3)
 
-nmds2_plot <- plot(nmds2, type = "p")
-
-```
-
+## Wave parameters
 
 
