@@ -1,25 +1,21 @@
 ---
-title: "Are kelp forests different? A comparison of kelp forests between contrasting study sites"
+title: Are kelp forests different? A comparison of kelp forests between contrasting
+  study sites
 output:
   pdf_document:
     toc: yes
   html_notebook:
-    css: C:/Program Files/R/r_working_directory/benthic_paper/ecography.csl
     fig_caption: yes
     fig_height: 5
     fig_width: 4
+    toc: yes
+  html_document:
+    df_print: paged
     toc: yes
   word_document:
     toc: yes
 bibliography: mycollection.bib
 ---
-
-```{r global_options, include = FALSE}
-knitr::opts_chunk$set(include = TRUE, echo = FALSE, warning = FALSE,
-                      message = FALSE, tidy = FALSE, cache = FALSE,
-                      fig.align = 'center',
-                      fig.show = 'hold', fig.path = 'figures/')
-```
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 
@@ -45,7 +41,7 @@ Kelp forest structure can be influenced by a variety of factors that ultimately 
 
 _Ecklonia maxima_ a large canopy-forming kelp that dominates shallow temperate reefs off South Africa, particularly along the southern part of the west and the south-west coasts [@Bolton2002]. The south-west coast is considered a transition zone between the cool-temperate west coast and warm-temperate south coast and is characteristic of a rapid change in ocean temperature as well as an overlap in species composition between the two coasts [@Bolton2002]. Kelp forests on the west coast north of Cape Point are largely dominated by rock lobsters Jasus lalandii, filter-feeders (including the mussels Choromytilus meridionalis Krauss, and Aulomya ater Molina) and red understory seaweeds [@Field1976; @Field1980a; @Leliaert2000; @Levitt2002]. Kelp forests east of Cape Point are grazer dominated [@Anderson1997; 2006; @Leliaert2000] and understory algae include a mixture of Ochrophyta, Chlorophyta and to a lesser extent Rhodophyta. These differences have been attributed largely to temperature but factors such as light, water motion, depth and grazer abundance may also play a role [@Velimirov1977; @Field1980; @Leliaert2000; @Bolton2002; @Levitt2002]. East of False Bay, kelp ecosystems have recently undergone a shift in benthic communities because of an increase in abundance of _J. lalandii_, a well-known predator of benthic herbivores including the urchin Parechinus angulosus [@Blamey2010; @Blamey2012].
 
-The sea urchin _P. angulosus_ is the dominant herbivore in South African kelp forests along the south-west coast [@Velimirov1977; @Field1980; @Leliaert2000] however, turbulent waters and its small size prevent it from feeding on adult kelps. I Instead the urchin is restricted to feeding mostly on kelp detritus, but also on juvenile kelps [@Fricke1979; @Day2002]. The abalone Haliotis midae is also a notable herbivore in this ecosystem, but it too feeds predominantly on kelp detritus [@Tarr1996; @Mayfield2000]. This abalone is closely associated with _P. angulosus_, whereby juvenile abalone take refuge beneath urchin spines [@Day2000a; @Day2000b; @Mayfield2000].The west coast rock lobster _J. lalandii_ is known for its role in maintaining alternative stable states [@Barkai1988] and is a major predator of both _P. angulosus_ and juvenile H. midae @Mayfield2001; @BlameyBranch2012], particularly east of Cape Point where subtidal mussel beds are scarce. In the early 1990s, _J. lalandii_ expanded its distribution east of False Bay [@Cockcroft2008]. Following the ‘invasion’ of rock lobsters, herbivore numbers declined significantly, most likely as a result of direct lobster predation, which resulted in an increased abundance of macroalgae and sessile invertebrates [@Blamey2010; @Blamey2012]. This suggests that the invasion of _J. lalandii_ into these areas has resulted in the establishment of an alternative stable-state [@Blamey2012] and is an excellent example of the role that predators can play in transforming the structure and functioning of ecosystems, without directly disturbing kelp themselves.
+The sea urchin _P. angulosus_ is the dominant herbivore in South African kelp forests along the south-west coast [@Velimirov1977; @Field1980; @Leliaert2000] however, turbulent waters and its small size prevent it from feeding on adult kelps. Instead the urchin is restricted to feeding mostly on kelp detritus, but also on juvenile kelps [@Fricke1979; @Day2002]. The abalone Haliotis midae is also a notable herbivore in this ecosystem, but it too feeds predominantly on kelp detritus [@Tarr1996; @Mayfield2000]. This abalone is closely associated with _P. angulosus_, whereby juvenile abalone take refuge beneath urchin spines [@Day2000a; @Day2000b; @Mayfield2000].The west coast rock lobster _J. lalandii_ is known for its role in maintaining alternative stable states [@Barkai1988] and is a major predator of both _P. angulosus_ and juvenile H. midae @Mayfield2001; @BlameyBranch2012], particularly east of Cape Point where subtidal mussel beds are scarce. In the early 1990s, _J. lalandii_ expanded its distribution east of False Bay [@Cockcroft2008]. Following the ‘invasion’ of rock lobsters, herbivore numbers declined significantly, most likely as a result of direct lobster predation, which resulted in an increased abundance of macroalgae and sessile invertebrates [@Blamey2010; @Blamey2012]. This suggests that the invasion of _J. lalandii_ into these areas has resulted in the establishment of an alternative stable-state [@Blamey2012] and is an excellent example of the role that predators can play in transforming the structure and functioning of ecosystems, without directly disturbing kelp themselves.
 
 Population structure of _E. maxima_ may depend on a variety of factors such as temperature [@Lee1988; @Raven1988; @Wiencke1989; @Dieck1993; @Connell2010; @Bartsch2012; @Mabin2013], light [@Lee1988; @Altamirano2004; @Wernberg2008; @Arkema2009; @Tait2014], wave motion [@Graham1997a; @Kawamata2001; @Wernberg2005; @FowlerWalker2006; @pedersen2012a] and nutrients [@Jackson1977; @AndrewsHutchings1980; @Field1980b; @Probyn1985; @Guimaraes1996; @Edwards2006]. At shallow depths (2–3m), the canopy tends to reach the surface; however, the structure changes to a mixture of sub-canopy and canopy at greater depths (5–10m), with eventual transition into _L. pallida_ dominated canopy (>10m) [@Rothman2006; @Rothman2010]. Therefore, from the surface it may appear that there is a change in biomass due to reduction in canopy cover with depth; however, due to the presence of sub-canopy kelps at deeper depths the biomass changes insignificantly [@Rothman2006]. Populations of E. maxima dominate the west coast, but more recently have increased in density in False Bay and further east [@Reimers2012], extending their range by 70km along the south coast [@Bolton2012] The range extension of E. maxima has been associated with a possible cooling and increased nutrient supply in the nearshore around the South African south-west coast [@Moloney2005; @Blamey2015b].
 
@@ -78,7 +74,7 @@ At each site, two 16m diameter circular plots within the middle of the kelp beds
 
 ## Statisical analyses
 
-All data analyses were done using the R software (R Core Team, 2016), and the vegan package (Oksanen et al. 2016) and ggplot2 (Wickham 2009). The Shapiro-Wilk normality test was run before any analyses to investigate the distribution of the data. All benthic data were first 4th root transformed before any analyses were run to down-weigh species that had high biomass values and low abundance values, as this may have affected the ordination analysis. The transformed data was then used to generate a Bray-Curtis similarity matrix.
+All data analyses were done using the R software (R Core Team, 2016), and the vegan package [@Oksanen2016] and ggplot2 [@Wickham2009]. The Shapiro-Wilk normality test was run before any analyses to investigate the distribution of the data. All benthic data were first 4th root transformed before any analyses were run to down-weigh species that had high biomass values and low abundance values, as this may have affected the ordination analysis. The transformed data was then used to generate a Bray-Curtis similarity matrix.
 
 ### Community analysis
 
@@ -102,30 +98,27 @@ fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "
 
 ### Species composition
 
-
-
-```{r diversity fauna script, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r diversity fauna script, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap='Comparison of raw biomass species data between sites. Graph A represents flora and graph B represents fauna.'}
 
 plot_flora <- ggplot(data = flora_lng, aes(x = species, y= biomass, fill = site)) + 
-              geom_bar(stat = "identity", show.legend = FALSE, position=position_dodge()) + 
+              geom_bar(stat = "identity", show.legend = FALSE,                                    position=position_dodge()) + 
               theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'white', colour = 'white')) +
+              theme(panel.background = element_rect(fill = 'white', colour =                      'white')) +
               ylab("") + 
               xlab("") +
-              coord_flip()
+              coord_flip() 
 
 plot_fauna <- ggplot(data = fauna_lng, aes(x = species, y= biomass, fill = site)) + 
-              geom_bar(stat = "identity", show.legend = TRUE ,position=position_dodge(),
+              geom_bar(stat = "identity", show.legend = TRUE                                      ,position=position_dodge(),
               size=.3) + 
               theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'white', colour = 'white')) +
+              theme(panel.background = element_rect(fill = 'white', colour =                      'white')) +
               ylab("") + 
               xlab("") +
               coord_flip()
-```
 
-```{r biomass barplot, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap='Comparison of raw biomass species data between sites. Graph A represents flora and graph B represents fauna.'}
 ggarrange(plot_flora, plot_fauna, ncol = 2, nrow = 1, labels = "AUTO", legend = "bottom", common.legend = TRUE, align = "none", heights = c(1.5,1))
+
 ```
 
 ## MDS
