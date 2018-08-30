@@ -1,0 +1,238 @@
+site;plot;id;type;length
+Bordjies ;B1;Q1;Canopy;320
+Bordjies ;B1;Q1;Canopy;340
+Bordjies ;B1;Q1;Canopy;345
+Bordjies ;B1;Q1;Canopy;330
+Bordjies ;B1;Q1;Canopy;310
+Bordjies ;B1;Q2;Canopy;310
+Bordjies ;B1;Q2;Sub-Canopy;51
+Bordjies ;B1;Q2;Canopy;340
+Bordjies ;B1;Q2;Canopy;340
+Bordjies ;B1;Q2;Canopy;330
+Bordjies ;B1;Q3;Recruits;0
+Bordjies ;B1;Q4;Canopy;253
+Bordjies ;B1;Q4;Sub-Canopy;150
+Bordjies ;B1;Q4;Sub-Canopy;280
+Bordjies ;B1;Q5;Sub-Canopy;276
+Bordjies ;B1;Q5;Canopy;332
+Bordjies ;B1;Q5;Sub-Canopy;284
+Bordjies ;B1;Q5;Sub-Canopy;210
+Bordjies ;B1;Q5;Canopy;305
+Bordjies ;B1;Q5;Canopy;356
+Bordjies ;B1;Q5;Sub-Canopy;212
+Bordjies ;B1;Q5;Canopy;305
+Bordjies ;B1;Q6;Recruits;0
+Bordjies ;B1;Q7;Canopy;313
+Bordjies ;B1;Q7;Canopy;325
+Bordjies ;B1;Q7;Sub-Canopy;295
+Bordjies ;B1;Q7;Canopy;342
+Bordjies ;B1;Q8;Canopy;351
+Bordjies ;B2;Q9;Canopy;350
+Bordjies ;B2;Q9;Canopy;300
+Bordjies ;B2;Q9;Canopy;340
+Bordjies ;B2;Q9;Canopy;335
+Bordjies ;B2;Q10;Recruits;0
+Bordjies ;B2;Q11;Sub-Canopy;53
+Bordjies ;B2;Q11;Canopy;360
+Bordjies ;B2;Q11;Canopy;345
+Bordjies ;B2;Q11;Canopy;370
+Bordjies ;B2;Q12;Canopy;300
+Bordjies ;B2;Q12;Canopy;360
+Bordjies ;B2;Q12;Canopy;320
+Bordjies ;B2;Q13;Canopy;320
+Bordjies ;B2;Q13;Canopy;300
+Bordjies ;B2;Q13;Sub-Canopy;210
+Bordjies ;B2;Q13;Sub-Canopy;280
+Bordjies ;B2;Q14;Recruits;0
+Bordjies ;B2;Q15;Sub-Canopy;64
+Bordjies ;B2;Q15;Sub-Canopy;101
+Bordjies ;B2;Q15;Sub-Canopy;128
+Bordjies ;B2;Q15;Sub-Canopy;137
+Bordjies ;B2;Q15;None;0
+Bordjies ;B2;Q16;Sub-Canopy;65
+Bordjies ;B2;Q16;Canopy;304
+Oudekraal;O1;Q1;Sub-Canopy;51
+Oudekraal;O1;Q1;Sub-Canopy;78
+Oudekraal;O1;Q1;Sub-Canopy;56
+Oudekraal;O1;Q1;Sub-Canopy;51
+Oudekraal;O1;Q1;Sub-Canopy;53
+Oudekraal;O1;Q2;Sub-Canopy;450
+Oudekraal;O1;Q2;Sub-Canopy;175
+Oudekraal;O1;Q2;Canopy;576
+Oudekraal;O1;Q3;Canopy;557
+Oudekraal;O1;Q3;Canopy;519
+Oudekraal;O1;Q3;None;0
+Oudekraal;O1;Q3;None;0
+Oudekraal;O1;Q4;Canopy;526
+Oudekraal;O1;Q4;Canopy;543
+Oudekraal;O1;Q4;Sub-Canopy;470
+Oudekraal;O1;Q4;Canopy;517
+Oudekraal;O1;Q4;Sub-Canopy;416
+Oudekraal;O1;Q4;Sub-Canopy;151
+Oudekraal;O1;Q4;Sub-Canopy;450
+Oudekraal;O1;Q4;Canopy;515
+Oudekraal;O1;Q4;Sub-Canopy;231
+Oudekraal;O1;Q4;Sub-Canopy;105
+Oudekraal;O1;Q4;Sub-Canopy;487
+Oudekraal;O1;Q5;Sub-Canopy;127
+Oudekraal;O1;Q5;Sub-Canopy;82
+Oudekraal;O1;Q5;Canopy;535
+Oudekraal;O1;Q5;Canopy;505
+Oudekraal;O1;Q5;Sub-Canopy;152
+Oudekraal;O1;Q5;Sub-Canopy;72
+Oudekraal;O1;Q5;Sub-Canopy;54
+Oudekraal;O1;Q5;Recruits;0
+Oudekraal;O1;Q5;Recruits;0
+Oudekraal;O1;Q5;Recruits;0
+Oudekraal;O1;Q5;Recruits;0
+Oudekraal;O1;Q6;Sub-Canopy;55
+Oudekraal;O1;Q6;Sub-Canopy;73
+Oudekraal;O1;Q6;Canopy;556
+Oudekraal;O1;Q6;Canopy;570
+Oudekraal;O1;Q6;Sub-Canopy;154
+Oudekraal;O1;Q6;Sub-Canopy;470
+Oudekraal;O1;Q6;Recruits;0
+Oudekraal;O1;Q7;Sub-Canopy;262
+Oudekraal;O1;Q7;Sub-Canopy;302
+Oudekraal;O1;Q7;Sub-Canopy;142
+Oudekraal;O1;Q7;Sub-Canopy;202
+Oudekraal;O1;Q7;Sub-Canopy;464
+Oudekraal;O1;Q8;Sub-Canopy;421
+Oudekraal;O1;Q8;Sub-Canopy;423
+Oudekraal;O1;Q8;Sub-Canopy;494
+Oudekraal;O1;Q8;Sub-Canopy;205
+Oudekraal;O1;Q8;Canopy;511
+Oudekraal;O1;Q8;Canopy;539
+Oudekraal;O1;Q8;Canopy;508
+Oudekraal;O1;Q8;Canopy;532
+Oudekraal;O1;Q8;Canopy;600
+Oudekraal;O1;Q8;Sub-Canopy;380
+Oudekraal;O1;Q8;Sub-Canopy;125
+Oudekraal;O1;Q8;Sub-Canopy;56
+Oudekraal;O1;Q8;Sub-Canopy;76
+Oudekraal;O2;Q9;Sub-Canopy;116
+Oudekraal;O2;Q9;Sub-Canopy;295
+Oudekraal;O2;Q9;Sub-Canopy;209
+Oudekraal;O2;Q9;Sub-Canopy;299
+Oudekraal;O2;Q10;Sub-Canopy;65
+Oudekraal;O2;Q11;Sub-Canopy;53
+Oudekraal;O2;Q11;Sub-Canopy;62
+Oudekraal;O2;Q11;Sub-Canopy;64
+Oudekraal;O2;Q11;Canopy;610
+Oudekraal;O2;Q11;Sub-Canopy;53
+Oudekraal;O2;Q11;Sub-Canopy;450
+Oudekraal;O2;Q11;Sub-Canopy;440
+Oudekraal;O2;Q11;Sub-Canopy;448
+Oudekraal;O2;Q11;Canopy;520
+Oudekraal;O2;Q11;Canopy;570
+Oudekraal;O2;Q11;Sub-Canopy;198
+Oudekraal;O2;Q12;Canopy;596
+Oudekraal;O2;Q12;Recruits;0
+Oudekraal;O2;Q13;Sub-Canopy;80
+Oudekraal;O2;Q13;Sub-Canopy;56
+Oudekraal;O2;Q13;Sub-Canopy;63
+Oudekraal;O2;Q13;Sub-Canopy;104
+Oudekraal;O2;Q13;Sub-Canopy;388
+Oudekraal;O2;Q14;Sub-Canopy;152
+Oudekraal;O2;Q14;Sub-Canopy;53
+Oudekraal;O2;Q14;Sub-Canopy;74
+Oudekraal;O2;Q14;Sub-Canopy;400
+Oudekraal;O2;Q14;Sub-Canopy;108
+Oudekraal;O2;Q14;Sub-Canopy;57
+Oudekraal;O2;Q14;Sub-Canopy;51
+Oudekraal;O2;Q14;Canopy;557
+Oudekraal;O2;Q14;Sub-Canopy;438
+Oudekraal;O2;Q15;Sub-Canopy;61
+Oudekraal;O2;Q15;Sub-Canopy;51
+Oudekraal;O2;Q15;Sub-Canopy;53
+Oudekraal;O2;Q15;Sub-Canopy;54
+Oudekraal;O2;Q15;Sub-Canopy;83
+Oudekraal;O2;Q15;Sub-Canopy;53
+Oudekraal;O2;Q15;Sub-Canopy;53
+Oudekraal;O2;Q15;Sub-Canopy;54
+Oudekraal;O2;Q15;Sub-Canopy;51
+Oudekraal;O2;Q15;Sub-Canopy;58
+Oudekraal;O2;Q16;Sub-Canopy;94
+Oudekraal;O2;Q16;Sub-Canopy;166
+Oudekraal;O2;Q16;Sub-Canopy;377
+Oudekraal;O2;Q16;Sub-Canopy;313
+Oudekraal;O2;Q16;Sub-Canopy;105
+Oudekraal;O2;Q16;Sub-Canopy;141
+Oudekraal;O2;Q16;Sub-Canopy;82
+Oudekraal;O2;Q16;Sub-Canopy;58
+Oudekraal;O2;Q16;Sub-Canopy;52
+Oudekraal;O2;Q16;Sub-Canopy;195
+Oudekraal;O2;Q16;Sub-Canopy;58
+Oudekraal;O2;Q16;Sub-Canopy;410
+Oudekraal;O2;Q16;Sub-Canopy;205
+Betty's Bay;Y1;Q1;Canopy;750
+Betty's Bay;Y1;Q1;Canopy;650
+Betty's Bay;Y1;Q1;Canopy;601
+Betty's Bay;Y1;Q1;Canopy;720
+Betty's Bay;Y1;Q1;Sub-Canopy;520
+Betty's Bay;Y1;Q1;Sub-Canopy;560
+Betty's Bay;Y1;Q1;Canopy;653
+Betty's Bay;Y1;Q2;Canopy;643
+Betty's Bay;Y1;Q2;Canopy;620
+Betty's Bay;Y1;Q2;Canopy;678
+Betty's Bay;Y1;Q3;Canopy;633
+Betty's Bay;Y1;Q3;Canopy;642
+Betty's Bay;Y1;Q4;Canopy;707
+Betty's Bay;Y1;Q4;Canopy;630
+Betty's Bay;Y1;Q4;Canopy;607
+Betty's Bay;Y1;Q4;Canopy;675
+Betty's Bay;Y1;Q4;Canopy;636
+Betty's Bay;Y1;Q4;Sub-Canopy;550
+Betty's Bay;Y1;Q4;Canopy;729
+Betty's Bay;Y1;Q4;Canopy;677
+Betty's Bay;Y1;Q4;Canopy;750
+Betty's Bay;Y1;Q4;Sub-Canopy;507
+Betty's Bay;Y1;Q5;Sub-Canopy;583
+Betty's Bay;Y1;Q5;Sub-Canopy;564
+Betty's Bay;Y1;Q5;Canopy;614
+Betty's Bay;Y1;Q5;Canopy;612
+Betty's Bay;Y1;Q6;Canopy;600
+Betty's Bay;Y1;Q6;Sub-Canopy;574
+Betty's Bay;Y1;Q6;Sub-Canopy;590
+Betty's Bay;Y1;Q6;Sub-Canopy;533
+Betty's Bay;Y1;Q6;Sub-Canopy;566
+Betty's Bay;Y1;Q6;Canopy;646
+Betty's Bay;Y1;Q6;Sub-Canopy;561
+Betty's Bay;Y1;Q6;Canopy;648
+Betty's Bay;Y1;Q7;Sub-Canopy;523
+Betty's Bay;Y1;Q7;Sub-Canopy;596
+Betty's Bay;Y1;Q7;Sub-Canopy;557
+Betty's Bay;Y1;Q7;Canopy;605
+Betty's Bay;Y1;Q7;Sub-Canopy;523
+Betty's Bay;Y1;Q7;Canopy;605
+Betty's Bay;Y1;Q7;Sub-Canopy;571
+Betty's Bay;Y1;Q7;Sub-Canopy;578
+Betty's Bay;Y1;Q7;Sub-Canopy;581
+Betty's Bay;Y1;Q7;Sub-Canopy;587
+Betty's Bay;Y1;Q7;Canopy;656
+Betty's Bay;Y1;Q7;Sub-Canopy;562
+Betty's Bay;Y1;Q7;Sub-Canopy;562
+Betty's Bay;Y1;Q8;Sub-Canopy;562
+Betty's Bay;Y1;Q8;Sub-Canopy;577
+Betty's Bay;Y1;Q8;Sub-Canopy;555
+Betty's Bay;Y1;Q8;Sub-Canopy;587
+Betty's Bay;Y2;Q9;Canopy;605
+Betty's Bay;Y2;Q9;Sub-Canopy;570
+Betty's Bay;Y2;Q9;Canopy;700
+Betty's Bay;Y2;Q9;Canopy;749
+Betty's Bay;Y2;Q10;Canopy;670
+Betty's Bay;Y2;Q11;Canopy;715
+Betty's Bay;Y2;Q12;Canopy;720
+Betty's Bay;Y2;Q13;Sub-Canopy;540
+Betty's Bay;Y2;Q13;Canopy;637
+Betty's Bay;Y2;Q13;Canopy;642
+Betty's Bay;Y2;Q13;Canopy;643
+Betty's Bay;Y2;Q14;Canopy;688
+Betty's Bay;Y2;Q14;Canopy;665
+Betty's Bay;Y2;Q14;Canopy;686
+Betty's Bay;Y2;Q15;Canopy;672
+Betty's Bay;Y2;Q15;Canopy;673
+Betty's Bay;Y2;Q15;Canopy;694
+Betty's Bay;Y2;Q16;Canopy;712
+Betty's Bay;Y2;Q16;Canopy;701
+Betty's Bay;Y2;Q16;Canopy;702

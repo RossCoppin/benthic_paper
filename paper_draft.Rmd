@@ -24,21 +24,18 @@ library(vegan)
 library(ggplot2)
 library(reshape2)
 library(vegan)
-library(gridExtra)
-library(lubridate)
-library(GGally)
 library(ggpubr)
 ```
 
 ## Introduction
 
-Kelps are a cold-water species of large brown algae, belonging to the order Laminariales. They are regarded as ecosystem engineers, providing a 3-dimensional habitat for a variety of fauna and flora. In addition, kelp ecosystems host a number of economically important species such as lobster, abalone and fish [@Dayton1985; @Steneck2002]. Various abiotic (e.g. light, wave exposure, sedimentation) and biotic (e.g. grazing) factors structure kelp forests [@Devinny1978; @Dayton1992; @Utter1996; @Toohey2004; @Rothman2006; @Wernberg2008; @pedersen2012a]. Variations in these factors ultimately affects the way kelp-associated benthos communities are structured [@Dayton1985; @Guimaraes1996; @Wernberg2008; @Wernberg2009]
-.
+Kelps are a cold-water species of large brown algae, belonging to the order Laminariales. They are regarded as ecosystem engineers, providing a 3-dimensional habitat for a variety of fauna and flora. In addition, kelp ecosystems host a number of economically important species such as lobster, abalone and fish [@Dayton1985; @Steneck2002]. Various abiotic (e.g. light, wave exposure, sedimentation) and biotic (e.g. grazing) factors structure kelp forests [@Devinny1978; @Dayton1992; @Utter1996; @Toohey2004; @Rothman2006; @Wernberg2008; @pedersen2012a]. Variations in these factors ultimately affects the way kelp-associated benthos communities are structured [@Dayton1985; @Guimaraes1996; @Wernberg2008; @Wernberg2009]. 
+
 Temperature is recognised as the main abiotic driver of marine species distributions [@Dayton1992; @Hiscock2004; @Wernberg2011; @Wernberg2013; @Wernberg2016; @Mabin2013]. Given kelp’s preference for cold-temperate waters, ocean warming poses a serious threat to these ecosystems [@Wernberg2010; @Wernberg2011; @Verges2016]. In the absence of kelp, other types of systems may persist, for example algal turf, coralline reefs or urchin barrens [Verges2016]. These other systems support a different array of fauna and flora and are considered less diverse and less productive than kelp forests [@Dayton1985; @Connell2008; @Byrnes2011]. In future climate scenarios, species distributions are expected to shift poleward in response to changing ocean temperatures. Given kelps are cold-water species, changes in ocean temperatures, particularly warming, could have detrimental effects on their growth, survival, reproduction and recruitment.
 
-Other abiotic drivers such as light [@Dayton1984; @Bolton1985a; @Dieck1993; @Sjøtun2006; @Wernberg2008], sedimentation [@Duggins1990; @Vadas1992; @Schiel2006; Schiel2006] and water motion [@Hurd2000; @Kawamata2001; @Mudge2003; @Scrosati2004; @Wernberg2008; @pedersen2012a] have been shown to be important in the settlement, growth, and survival of kelp and biotic variables (e.g. see @Black1976; @Kennelly1983; @Dayton1984; @Harris1984; @Carpenter1990; @Sivertsen2006; @Harley2012) play an equally important role in structuring kelp communities, through alteration in top-down and bottom-up control mechanisms [@Breen1976; @Duggins1980; @Harris1984; @Estes1995; @Shears2002; @Arkema2009; @Blamey2012].
+wave exposure is regarded as another important abiotic factor in shaping kelp communities. Add section here....
 
-Kelp forest structure can be influenced by a variety of factors that ultimately determine the size frequency distribution of individuals and their spatially and temporarily variability. Much of the past research on kelp population structure focuses on the different variables that may affect kelp recruitment. It is generally accepted that most kelps rely on a ‘recruitment window’; a time when environmental factors are favourable for spore release and growth [@Deysher1986]; however, other factors such as temperature, nutrients, light, wave motion, substratum, sedimentation, grazing etc. may also be important in the settlement and growth of spores, even during optimal recruiting conditions [@Devinny1978; @Dayton1985; @Deysher1986a; Deysher1986b; @Vadas1992; @Kawamata2001; @Taylor2003; @Schiel2006; @Rothausler2009; @Staehr2009; @Wernberg2011; @Franco2015].
+Other abiotic drivers such as light [@Dayton1984; @Bolton1985a; @Dieck1993; @Sjøtun2006; @Wernberg2008], sedimentation [@Duggins1990; @Vadas1992; @Schiel2006; Schiel2006] and water motion [@Hurd2000; @Kawamata2001; @Mudge2003; @Scrosati2004; @Wernberg2008; @pedersen2012a] have been shown to be important in the settlement, growth, and survival of kelp and biotic variables (e.g. see @Black1976; @Kennelly1983; @Dayton1984; @Harris1984; @Carpenter1990; @Sivertsen2006; @Harley2012) play an equally important role in structuring kelp communities, through alteration in top-down and bottom-up control mechanisms [@Breen1976; @Duggins1980; @Harris1984; @Estes1995; @Shears2002; @Arkema2009; @Blamey2012].
 
 ### The South African context
 
@@ -69,15 +66,11 @@ The aim of this study was to determine if contrasting temperature regimes and wa
 ### Data collection
 ### Benthic 
 
-At each site, two 16m diameter circular plots within the middle of the kelp beds were selected. Each plot was approximately 200m^2^ in area. Long-term temperature loggers (StarOddi: Starmon mini) are located nearby at each site. Each plot was permanently marked with a 0.5 m railway bar placed in the center of the plot and a GPS position recorded. Sampling of the plots involved SCUBA divers attaching a transect line to the railway bar at the center of the plot and swimming out 8m along predetermined compass bearings. Rock lobsters and abalone were counted within 1m either side of the transect. On the return swim towards the center of the plot 0.5 × 0.5m quadrats were sampled at 1m and 4m along the transect. The percentage cover of sand, rock, foliose algae, encrusting coralline algae, sponge, mussel and silt were estimated and recorded. Larger invertebrates such as abalone and rock lobster were counted and recorded 1m either side of the transect line. All other species encountered within the quadrats, except adult kelp and larger invertebrates mentioned above, were then scraped off, placed in collecting bags, and taken back to the laboratory where they were identified and weighed (wet and dry mass in grams). These steps were repeated on four different compass bearings giving: (1) a total of eight (0.5 × 0.5m) quadrats sampled for each of the two plot (i.e. 16 quadrats per site); and (2) a total of four 8m transects for each of the two plots for the rock lobster and abalone counts. Given the abundance of urchins at some sites, a mean biomass estimate was obtained for this species. This was achieved through collecting 50 individuals of P. angulosus, which were then oven dried, weighed and mean biomass calculated. Biological material in collecting bags, taken from the quadrats, were transferred to plastic sample bags. Back in the laboratory all samples were frozen at -20°C for later identification. All biological material were identified as far as possible to species and their wet and oven dry mass were measured and recorded.
-
-### Kelp population
-
-
+At each site, two 16m diameter circular plots within the middle of the kelp beds were selected. Each plot was approximately 200m^2^ in area. Long-term temperature loggers (StarOddi: Starmon mini) are located nearby at each site. Each plot was permanently marked with a 0.5 m railway bar placed in the center of the plot and a GPS position recorded. Sampling of the plots involved SCUBA divers attaching a transect line to the railway bar at the center of the plot and swimming out 8m along predetermined compass bearings. Rock lobsters and abalone were counted within 1m either side of the transect. On the return swim towards the center of the plot 0.5 × 0.5m quadrats were sampled at 1m and 4m along the transect. The percentage cover of sand, rock, foliose algae, encrusting coralline algae, sponge, mussel and silt were estimated and recorded. Larger invertebrates such as abalone and rock lobster were counted and recorded 1m either side of the transect line. All other species encountered within the quadrats, except adult kelp and larger invertebrates mentioned above, were then scraped off, placed in collecting bags, and taken back to the laboratory where they were identified and weighed (wet and dry mass in grams). These steps were repeated on four different compass bearings giving: (1) a total of eight (0.5 × 0.5m) quadrats sampled for each of the two plot (i.e. 16 quadrats per site); and (2) a total of four 8m transects for each of the two plots for the rock lobster and abalone counts. Given the abundance of urchins at some sites, a mean biomass estimate was obtained for this species. This was achieved through collecting 50 individuals of _P. angulosus, which were then oven dried, weighed and mean biomass calculated. Biological material in collecting bags, taken from the quadrats, were transferred to plastic sample bags. Back in the laboratory all samples were frozen at -20°C for later identification. All biological material were identified as far as possible to species and their wet and oven dry mass were measured and recorded.
 
 ## Statisical analyses
 
-All data analyses were done using the R software (R Core Team, 2016), and the vegan package [@Oksanen2016] and ggplot2 [@Wickham2009]. The Shapiro-Wilk normality test was run before any analyses to investigate the distribution of the data. All benthic data were first 4th root transformed before any analyses were run to down-weigh species that had high biomass values and low abundance values, as this may have affected the ordination analysis. The transformed data was then used to generate a Bray-Curtis similarity matrix.
+
 
 ### Community analysis
 
@@ -85,58 +78,5 @@ All data analyses were done using the R software (R Core Team, 2016), and the ve
 
 \newpage
 ## Results
-
-```{r message=FALSE, warning=FALSE, include=FALSE}
-
-benthic <- read.csv(file = "data/benthic.csv", check.names = FALSE)
-cover_df <- read.csv(file = "data/cover.csv", check.names = FALSE)
-kelp_df <- read.csv(file = "data/kelp.csv", check.names = FALSE)
-
-```
-
-### Species composition
-
-```{r message=FALSE, warning=FALSE}
-
-flora_df <- read.csv(file = "data/flora.csv", check.names = FALSE)
-fauna_df <- read.csv(file = "data/fauna.csv", check.names = FALSE)
-
-flora_lng <- melt(data = flora_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species") 
-fauna_lng <- melt(data = fauna_df, value.name = "biomass", id.vars = c("site", "id"), variable.name = "species")
-
-plot_flora <- ggplot(data = flora_lng, aes(x = species, y= biomass, fill = site)) + 
-              geom_bar(stat = "identity", show.legend = FALSE,                                    position=position_dodge()) + 
-              theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'white', colour =                      'white')) +
-              ylab("") + 
-              xlab("") +
-              coord_flip() 
-
-plot_fauna <- ggplot(data = fauna_lng, aes(x = species, y= biomass, fill = site)) + 
-              geom_bar(stat = "identity", show.legend = TRUE                                      ,position=position_dodge(),
-              size=.3) + 
-              theme(axis.text.x=element_text(angle = 90, hjust = 1, vjust = 0.3)) +
-              theme(panel.background = element_rect(fill = 'white', colour =                      'white')) +
-              ylab("") + 
-              xlab("") +
-              coord_flip()
-```
-
-```{r, message=FALSE, warning=FALSE, paged.print=FALSE, fig.cap='Comparison of raw biomass species data between sites. Graph A represents flora and graph B represents fauna.'}
-
-
-ggarrange(plot_flora, plot_fauna, ncol = 2, nrow = 1, labels = "AUTO", legend = "bottom", common.legend = TRUE, align = "none", heights = c(1.5,1))
-```
-
-## MDS
-
-
-
-## Temperature
-
-
-
-
-## Wave parameters
 
 
