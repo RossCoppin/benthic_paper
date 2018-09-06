@@ -2,30 +2,20 @@
 title: Are kelp forests different? A comparison of kelp forests between contrasting
   study sites
 output:
-  pdf_document:
+  html_document:
+    df_print: paged
     toc: yes
   html_notebook:
     fig_caption: yes
     fig_height: 5
     fig_width: 4
     toc: yes
-  html_document:
-    df_print: paged
+  pdf_document:
     toc: yes
   word_document:
     toc: yes
 bibliography: mycollection.bib
 ---
-
-```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
-
-library(tidyverse)
-library(vegan)
-library(ggplot2)
-library(reshape2)
-library(vegan)
-library(ggpubr)
-```
 
 ## Introduction
 
