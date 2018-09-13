@@ -8,7 +8,12 @@
 #kelp_ar <- read.csv(file = "data/kelp_ar.csv", check.names = FALSE, sep = ";")
 #kelp_lgth <- read.csv(file ="data/kelp_length.csv", check.names = FALSE, sep = ";")
 #data("varespec")
-
+#ben_bord <- benthic %>% 
+#  filter(site == "Bordjies")
+#ben_oud <- benthic %>% 
+#  filter(site == "Oudekraal")
+#ben_bet <- benthic %>% 
+#  filter(site == "Betty's Bay")
 ## community
 # setup
 
@@ -17,40 +22,48 @@ library(vegan)
 library(MASS)
 library(tidyverse)
 
-flora_df <- read.csv(file = "data/flora.csv", sep = ";", check.names = FALSE)
-fauna_df <- read.csv(file = "data/fauna.csv", check.names = FALSE, sep = ";")
-benthic <- merge(flora_df,fauna_df,by=c("site","plot", "id"))
+#flora_df <- read.csv(file = "data/flora.csv", sep = ";", check.names = FALSE)
+#fauna_df <- read.csv(file = "data/fauna.csv",  sep = ";", check.names = FALSE)
+#species_df <- read.csv(file = "data/species.csv", sep = ";", check.names = FALSE)
+#cover_df <- read.csv(file = "data/cover.csv", sep = ";", check.names = FALSE)
 
-ben_bord <- benthic %>% 
-  filter(site == "Bordjies")
-ben_oud <- benthic %>% 
-  filter(site == "Oudekraal")
-ben_bet <- benthic %>% 
-  filter(site == "Betty's Bay")
+
+##RDA
+
+benthic_df <- read.csv(file = "data/test.csv", sep = ";", check.names = FALSE)
+
+# Rename data set
+benthic_site0 <- benthic_df
 
 # Subset site names
-bord_site <- subset(benbord, select = c(1))
+benthic_site <- subset(benthic_site0, select = c(1))
 
-bord_mat <- subset(ben_bord, select = c(4:77))
-bord_mat_std <- bord_mat %>%
+# Subset out species data
+species_mat <- subset(benthic_site0, select = c(10:81))
+
+# Subset out cover data
+cover_mat <- subset(benthic_site0, select = c(4:8))
+
+# Standardise cover data
+cover_mat_std <- cover_mat %>%
   decostand(method = "standardize")
 
-# standardise measurements
-cover_mat <- subset(cover_df, select = c(4:9))
-cover_v3 <- cover_v2 %>%
+# Standardise species data
+species_mat_std <- species_mat %>%
   decostand(method = "standardize")
 
 # Force site names as column 0
-ben_cov <- cbind(benthic_v3, cover_v3)
+species <- cbind(benthic_site, species_mat_std)
 
-# run RDA
-com_RDA <- rda(ben_cov ~ ., data = cover_v3)
+species <- species %>%
+  column_to_rownames(var = "site")
 
+
+eck_wave_RDA <- rda(cover_mat_std ~ ., data = species_mat_std)
 # Plot scaling = 2
-plot(com_RDA, scaling  = 2)
+plot(eck_wave_RDA, scaling  = 2)
 
 # Summary
-summary(com_RDA)
-
+summary(eck_wave_RDA)
 
 
