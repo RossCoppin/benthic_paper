@@ -1,0 +1,1290 @@
+---
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    highlight: default
+    keep_tex: yes
+    latex_engine: xelatex
+  bookdown::pdf_document2:
+    fig_caption: yes
+    fig_height: 6.5
+    fig_width: 6.5
+    highlight: default
+    keep_tex: yes
+    latex_engine: xelatex
+    template: LaTeX/template-article_ajs.tex
+  html_document:
+    fig_caption: yes
+    fig_retina: 2
+    fig_width: 7
+    highlight: espresso
+    theme: sandstone
+    toc_float: no
+  bookdown::html_document2:
+    fig_caption: yes
+    fig_retina: 2
+    fig_width: 7
+    highlight: espresso
+    theme: sandstone
+    toc_float: no
+  word_document:
+    fig_caption: yes
+    fig_height: 7
+    fig_width: 7
+    highlight: zenburn
+    toc: no
+fontsize: 12pt
+geometry: margin=1in
+language: Australian
+mainfont: PT Serif
+monofont: PT Mono
+csl: LaTeX/ecography.csl
+papersize: A4
+sansfont: PT Sans
+tables: yes
+bibliography: honoursTim/kelp_morphology.bib
+---
+
+\newpage
+## Plagiarism Declaration
+
+
+\newpage
+## Declaration
+
+
+\newpage
+## Abstract
+
+Two species of kelp, _Ecklonia maxima_ and _Laminaria pallida_, dominate the nearshore environment around the Western Cape coast. These structure producing kelps provide habitat for various organisms, and are distributed across a region where the thermal and wave energy regimes vary significantly. Across this distribution, the morphology of each species displays a disparity in shape and size. The morphology of macroalgae is known to be influenced by wave exposure, however waves are made up of various constituents, such as wave height, wave direction and period. Not much is understood on specific wave parameters and their influence on macroalgal morphology. We therefore used existing thermal and wave energy data for 18 sites across the Western Cape coast, and investigated how individual abiotic parameters influence the morphology of each species. While temperature influences kelp distributions most strongly, localised variation in the morphology of kelps are driven by wave parameters. The biggest influences was found to be wave direction, significant wave height and wave period, which explain much of the total length, lamina thickness and stipe circumference of each species.  Turbidity correlates with wave energy, where sedimentation of the water column through excessive wave movements reduces light penetration. The expansion of _Laminaria pallida_ lamina area was found in high turbidity environments. These sites also displayed decreased lamina thickness (which positively correlates with photosynthetic ability). _Laminaria pallida_ sporophytes in highly turbid environments, where the boundary diffuse layer is reduced and nutrient uptake is easier, are thought to rely on greater light-capturing surface area instead of photosynthetic ability. We can therefore see how specific wave parameters are able to influence the morphology of kelps, and confirms the idea of morphoplasticity in South African kelp species. 
+
+\
+*Keywords*: Morphoplasticity, Wave exposure, Turbidity, Thermal Distribution, Macroalgae
+
+\newpage
+## Acknowledgments
+
+I would like to firstly say thank you to the lecturers and support staff from the Department of Biodiversity and Conservation biology at the University of the Western Cape. Your guidance and encouragement through the honours year was much appreciated. I would like to thank my supervisor, Prof. AJ Smit, for the opportunity and funding to study a topic which allowed me to regularly be in the ocean, something which I am very grateful for. I would also like to thank my co-supervisor, Dr. Robert Williamson, for the support throughout the year, as well as Robert Schlegel for all the help in R. The collection of data would not have happened without the help of Team Kelp, thank you for the hard work! The build-up to this thesis would not have been possible without the support from the rest of the BCB Honours class of 2017. The comradery and healthy competition pushed me to work hard. I would like to thank my friends for providing a backbone of support when things became difficult. Finally I would like to thank my family for the support throughout the year. My parents have provided me with a strong foundation of morals and work ethic which served me well this year. 
+
+
+\newpage
+## Introduction
+
+### The role of kelps
+
+Kelp forests dominate the nearshore biomass within the rocky shallow coasts of the world’s temperature marine environments [@Steneck2002]. Although kelps have low taxonomic diversity, they provide structure within a functionally diverse environment [@Steneck2002]. Kelps provide a substratum for a diversity of sessile organisms [@Duggins1989; @Dunton1987] as well as a habitat for various motile organisms that feed on and within kelp beds [@Steneck2002]. Structurally, kelps provide an important nursery habitat for many pelagic and benthic organisms [@Bologna1993; @Levin1994; @Anderson1997]. Kelp canopies are used by predatory fish to hunt, and therefore a reduction in kelp beds may see an increase in prey organisms as well as their larvae [@Gaines1987]. Kelp beds also encourage the formation of communities of carpets of foliose, turf and crustose coralline macroalgae. Along with these algae comes a wide range of marine biota such as large marine mammals, various fish species and invertebrate communities. In turn this allows kelps beds to house some of the highest diversity of marine organism’s worldwide [@Mann1973].
+
+Vital nutrients are provided to coastal environments through food webs based on detrital kelp [@Duggins1989], as herbivores frequently consume less than 10% of living biomass [@Mann2000]. Therefore the benthos can be commonly found littered with large macroalgae such as kelp, in the coastal environment. This provides a source of food for microbes and detritivores [@Linley1981], as well as carbon availability for suspension feeders and herbivores within the coastal community [@Dunton1987; @Duggins1989]. By altering secondary production, kelp beds are able to support food webs in the coastal environment [@Duggins1989; @Mann2000].
+
+
+### Kelps in South Africa
+
+The biogeographic distribution of kelp is limited by seawater temperature [@Bolton2010], where increasing temperature gradients reduce kelp distribution. Due to this limiting factor, the two main species of kelps in southern African waters, _Ecklonia maxima_ and _Laminaria pallida_, are distributed along a section of the south coast from De Hoop, extending west around the Cape Peninsula, and thriving north into Namibia [@Molloy1990; @stegenga1997seaweeds]. This distribution follows a temperate temperature gradient, where sea temperatures increase as one moves south from Namibia, around Cape Point and towards De Hoop. Although the two species occur together for the majority of the coast, their basic morphologies and resource needs vary to a degree. The larger species, _Ecklonia maxima_, is distributed from Lüderitz to Cape Agulhas [@Bolton1985; @Probyn1985; @Bolton1987; @Bolton2012]. Characterised by a large distal swollen bulb filled with gas, and smooth fronds, this species grows to approximately 10 meters [@Bolton1987]. There was, however, a 17-meter specimen collected in 2015 off Cape Point (Smit, unpubl. data). This species of kelp not only dominate the biomass of the South African nearshore, but plays an important ecological role [@bustamante1996dependence]. The estimated productivity of _Ecklonia maxima_ within South Africa varies between 350 and 1500g C m^-2yr-1^ [@mann1982ecology].
+
+Across the majority of the coastline, _Laminaria pallida_ remains a subsurface kelp, dominating the kelp biomass at depths greater than 10 meters [@Field1980; @Bolton1987; @Molloy1996]. This species is distributed from Danger Point, east of the Cape Peninsula, to Rocky Point in northern Namibia, and reaches depths of greater than 20 meters. [@Molloy1990; @stegenga1997seaweeds; @Field1980; @Molloy1996]. Towards the north along the west coast, from around Hondeklipbaai, _Laminaria pallida_ replaces _Ecklonia maxima_ as the dominant kelp species [@Velimirov1977; @stegenga1997seaweeds] and it also occupies increasingly shallower subtidal regions. The northern populations also exhibit an increase in stipe hollowness, compared to the solid stipe morphs in the species’ southern distributions [@Molloy1996]. This variation in morphology was thought to represent two distinct species, with the northern populations formerly described as _Laminaria schinzii_ Foslie [@Molloy1996]. Genetic work has subsequently shown that the two morphs are in fact the same species [@Rothman2017]. In southern African waters, the primary production of _Laminaria pallida_ is between 120 and 1900g C m^-2yr-1^, similar to that of _Ecklonia maxima_ [@mann1982ecology]. Primary production is not the only pathway by which these two species influence the environment. Fresh and detrital matter from these kelps not only provide support for organisms in the immediate sandy and rocky shores of South Africa, but connect to distant ecosystems [@Krumhansl2012].
+
+
+
+
+### Kelp relations with the environment
+Sea temperature co-varies with other abiotic parameters, and rarely influences kelp beds and the associated ecosystems on its own [@Dayton1985]. This can be seen by ambient temperature, which often controls light threshold [@Luning1978; @KainJones1979; @Luning1980; @Dean1983; @Drew1983], kelp growth and nutrient absorption [@Wheeler1980]. This proves that both temperature and turbidity (brought about by terrestrial run-off or increased sedimentation by wave energy) can influence the vertical distribution of macroalgae. High temperatures were thought to be the cause of kelps dying in California, but was later found that insufficient nutrients were the driving force that killed the kelps [@Dayton1985]. Kelps can survive in high water temperatures, but only if there is sufficient nutrients available. [@Jackson1983; @zimmerman1984episodic] A study by North [@North1986] however found that kelps died off at high temperatures, even though there was sufficient nutrients available. Temperature has direct effects on the biochemical and physiological rates in organisms, and is one of the most important factors in the distribution of organisms at various scales. [@Tittensor2010; @Kordas2001].
+
+
+
+Kelps, occurring across a multitude of hydrodynamic environments, exhibit an array of morphological variation, at an intra- and inter-specific level [@Johnson1994; @Wernberg2010]. This disparity is thought to be triggered by a trade-off between capitalising on light gain [@Koehl1988; @stewart2003effects; @Haring2007] and minimising loss by drag forces [@kawamata2001adaptive; @blanchette2002geographic; @BUCK2005674]. It is therefore hypothesised that kelps which inhabit low light, in reduced hydrodynamic locales, will display larger undulated thalli [@Koehl2008]. Kelp in environments with higher wave action and increased water motion, will exhibit strap-like thalli, streamline morphologies and thicker, stronger stipes [@Wernberg2005; @Fowler-Walker2006; @Wernberg2010; @Krumhansl2012]. Hurd et al. [@Hurd1996] found that increased nitrogen uptake occurred in increased flow regimes. By being positioned in a high flow regime, the boundary diffusion layer is thought to be reduced, allowing nutrients to be absorbed easier [@Raven1981; @Hurd2011]. Therefore kelp in lower flow regimes exhibit greater undulations, providing a greater surface area to absorb nutrients, as the boundary diffuse gradient is greater, and more difficult to overcome [@Harder2004]. This variation in morphology seems to be a plastic trait in kelps, termed ‘morphoplasticity’, where transplanted individuals from opposite flow regimes altered their morphology to adapt to the new environment [@Koehl2008].
+
+Temperature and hydrodynamic flow not only influence the distribution of macroalgae [@Bolton2010], but have been shown to affect the morphology of kelps and seaweeds [@Rothman2017]. Increased temperature has shown to reduce the photosynthetic rate, as well as a substantial decrease in respiration [@Staehr2009]. Temperatures higher than the optimal ~25°C for _Ecklonia radiate_ saw a decrease in photosynthetic ability. Staehr and Wernberg (2009) also found that an increase in temperature by 5° C reduced the depth-limit by 10% for specimens from cool-adapted locations. Depth-limit was also decreased by 50% when moving from clear water to more turbid environments.
+
+Kelps are not only affected by temperature and the flow regime but can alter the hydrodynamic conditions on a localised scale. Jackson and Winant [@Jackson1983] quantified the drag forces that kelps undergo off the coast of California, and found that up to a third of water velocities were experienced within a large _Macrocystis pyrifera_ bed, as opposed to directly outside the bed. Reduced flow within the beds are thought to promote planktonic larval growth [@Gaylord2002; @stewart2009differences; @gruber2010feedback; @Pinsky1239]. However, the increased flow rate on the exterior region may aid in nutrient-rich water injection into the interior [@Jackson1983]. Waves can be dampened by kelp canopies, which then influence water flow and other processes related to coastal erosion, sedimentation, primary and secondary benthic productivity, and recruitment [@Duggins1989].
+
+The South African coastline experiences a large variation in seawater temperature, where two defined currents govern the marine environment in the nearshore. West of Cape Point one will find the Benguela Marine Province (BMP), characterised by cold water moving north from the Southern Ocean via the Benguela current [@Anderson2009]. East of Cape Point lies the Agulhas Bank Ecoregion [@Spalding2007; @Smit2013; Smit et al. (In review)]. This ecoregion makes up the western half of the Agulhas province, which is governed by the warm Agulhas current that flows south along the east coast of South Africa. The two currents can vary in as much as 10°C [@Schlegel2017] on a single day and therefore create significant fluctuations in seawater temperatures around the south Western Cape. False Bay is positioned in the transition zone, an area between Cape Point and Cape Agulhas [@Smit2013; @Anderson2009]. This area not only draws comparisons from the two marine provinces but is distinctly unique in its nearshore makeup [@Smit2013]. In False Bay, water temperatures show seasonal variation with a mean of 13.2 °C in winter and a mean of 21.5 °C in summer [@Clark1996]. The dominant onshore south-easterly wind causes temperatures to increase during the summer months in False Bay [@Atkins1970]. Due to temporary upwelling events during spring and summer, the eastern and middle parts of False Bay is characterised by cold water whereas the shallower, northern parts of the bay are characterised by warmer water [@Atkins1970]. The western coast extending from Cape Point north to Namibia experiences large upwelling events during summer, triggered by the seasonal south easterly winds that blow [@Andrews1980].
+
+Kelp distributions along the coast of South Africa have remained unchanged for the last 70 years, but new evidence suggests an expansion in the taxa’s distribution. Bolton et al. [@Bolton2012] report the presence of _Ecklonia maxima_ in De Hoop Nature Reserve, approximately 73 km east of the species’ original distribution boundary. The shift eastwards is thought to be triggered by inshore seawater cooling along the south coast of South Africa, verifying the temperature dependence kelps possess [@Bolton2010].
+
+### Kelps and climate change 
+
+The global air temperature along the surface of the sea has increased by 0.4-0.8°C in the past 100 years (NOAA, 2015). In South Africa, the sea surface temperature (SST) has increased by 0.25°C between 1903 and 2013 (DEA, 2013). It currently is also increasing at a rate of ~0.12 °C per decade (Schlegel and Smit, pers. comm.). A distinct change in the temperature and salinity regime within the East Australian Current (EAC) has occurred within the last six years due to ocean warming [@JOHNSON201117]. This in turn caused a large decline in the distribution of _Macrocystis pyrifera_ in Tasmania [@JOHNSON201117]. Other climatic events such as El Niños have ceased coastal upwelling, warming surface waters and reducing nutrients in the nearshore [@dayton1999temporal]. This was observed in California, where patchy kelp deforestations occurred, however these kelp beds were able to quickly recover due to the transient nature of El Niños [@tegner1997large].
+
+Seasonality is important for kelp beds [@Dayton1985; @Steneck2002], and therefore any impact that global warming has on kelps may have increased negative implications for other marine ecosystems [@Wernberg2010]. If kelps are not able to persist in increased hydrodynamic and thermal environments, their distributions may be limited to deeper water [@harley2006impacts], or completely excluded [@WERNBERG20117]. 
+
+
+### Study area
+
+Due to the Cape Peninsula’s temperate latitude, winter months bring an increased frequency of frontal depressions that originate from the Southern Ocean [@Reason2006]. These low pressures are joined by large swells with increased wave energy. The nearshore environment, with the accompanied biota, therefore experiences high wave energy events, with increased frequency in winter. The large peninsula acts as an obstruction for large south westerly swells, providing decreased wave energy along the west side of False Bay [@Shipley1964]. Conversely, the west coast of Cape Point is battered by these large swells at full force. Multiple sites, therefore, exist where kelps grow in diverse temperature and wave energy climates, in close proximity.
+
+The aim of this study is, therefore, to understand how environmental drivers such as temperature and wave energy can influence morphoplasticity in two species of kelps around South Africa. This will be achieved by initially understanding the variation in abiotic parameters, and morphometrics of _Ecklonia maxima_ and _Laminaria pallida_, around the Western Cape coast. Thereafter we will look at how the abiotic parameters both correlate and influence each other in the nearshore environment of our study region. Finally, we will investigate which abiotic parameters best describe the morphological variation of the two kelp species, using statistical tools. It is predicted that higher wave energy environments will exhibit kelps with reduced undulations, possessing strap-like blades, opposed to low flow regimes that will show greater undulations in frond morphology. An increase in temperature is predicted to influence specific morphological traits that rely on nutrient uptake, as temperature and nutrients share an inverse relationship. An increase in temperature is also predicted to reduce the dominance of the colder water kelp, _Laminaria pallida_, at depth, with a total absence of _Laminaria pallida_ as one approaches the eastern boundary of sample sites.
+
+\newpage
+## Methods
+
+### Morphometrics collection
+
+Between October 2014 and April 2015, morphological measurements of _Laminaria pallida_ and _Ecklonia maxima_ were collected at 18 sites along the Western Cape coast of South Africa (Fig. 1). Eleven samples were collected per morphology, for each species (Table 1, 2). These varying morphometrics allowed measurements such as weight, length and thickness to be compared between sites. Because the macroalgae differ in construction, species-specific morphometrics were included. These sites span across the majority of the Western Cape coast, in varying thermal and wave energy regimes.
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+morph <- read.csv("honoursTim/Morphology table.csv")
+
+colnames(morph) <- c("Morphometric", "Unit measurement")
+
+morph_eck <- morph[(1:10), ]
+morph_lam <- morph[(11:19), ]
+
+```
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+
+kable(morph_eck, row.names = FALSE, caption = "A list of morphology measurements that were collected to investigate how environmental drivers may influence the morphology of _Ecklonia maxima _. Units for each morphometric are included.")
+
+```
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+
+kable(morph_lam, row.names = FALSE, caption = "A list of morphology measurements that were collected to investigate how environmental drivers may influence the morphology of _Laminaria pallida_. Units for each morphometric are included.")
+
+```
+
+### Sites
+
+Sites were chosen to represent an array of morphological differences seen within _Ecklonia maxima_ and _Laminaria pallida_. Sites were also chosen to reflect locations that displayed variable wave and temperature regimes (Fig. 2-5), to allow us to robustly test our hypothesis of environmental drivers influencing kelp morphology. St. Helena Bay and Betty’s Bay constituted the north western and south eastern boundary sites respectively. These sites are roughly 300km apart, and lie within separate marine provinces, as outlined above. The Cape Peninsula provides an interesting topographical boundary that shelters the coast in False Bay. Sites were therefore chosen to represent an array of environments, from offshore reefs (Batsata Rock), to sheltered intertidal zones (Miller’s Point). West of Cape Point, a number of sites were chosen to highlight the presence of upwelling (Oudekraal, Kommetjie), as well as kelps growing in protected bays (Hout Bay). 
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="A map indicating the sites where morphometric measurements were collected for _Ecklonia maxima_ and _Laminaria pallida_.", fig.height=8, fig.width=12}
+library(tidyverse)
+library(vegan)
+library(RColorBrewer)
+library(gridExtra)
+library(lubridate)
+library(GGally)
+library(ggpubr)
+library(ggrepel)
+
+
+# Load map data
+load("honoursTim/maps/south_africa_coast.Rdata")
+load("honoursTim/maps/sa_provinces.Rdata")
+load("honoursTim/maps/site_list.Rdata")
+
+
+# remove De Hoop
+kelp_sites <- read_csv("metadata/sites_complete.csv")
+kelp_sites_map <- subset(kelp_sites, !site == "De Hoop")
+
+# Subset into 4 regions
+west__up_site <- subset(kelp_sites, site == "St Helena Bay" | site == "Sea Point" 
+                    | site == "Oudekraal" | site == "Hout Bay")
+
+west__down_site <- subset(kelp_sites, site == "Soetwater" | site == "Olifantsbos" | site == "Scarborough" | site == "Kommetjie")
+
+east_up_site <- subset(kelp_sites, site == "Roman Rock" | site == "A-Frame" | site == "Miller's Point" | site == "Baboon Rock" | site == "Kalk Bay")
+
+east_down_site <- subset(kelp_sites, site == "Batsata Rock" | site == "Bordjies Deep" | site == "Buffelsbaai South" 
+                         | site == "Buffelsbaai" | site == "Betty's Bay")
+
+# plot map
+ggplot(data = kelp_sites_map, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = kelp_sites_map)  +
+  coord_fixed(xlim = c(17.65, 19.5), ylim = c(-32.75, -34.6)) +
+  geom_label_repel(data = west__up_site, aes(x = lon, y = lat, label = site), 
+                   size = 3, box.padding = 0.5, nudge_x = -0.5, nudge_y = 0.2, segment.alpha = 0.4) +
+  geom_label_repel(data = west__down_site, aes(x = lon, y = lat, label = site), 
+                   size = 3, box.padding = 0.5, nudge_x = -0.5, nudge_y = -0.2, segment.alpha = 0.4) +
+  geom_label_repel(data = east_up_site, aes(x = lon, y = lat, label = site), 
+                   size = 3, box.padding = 0.5, nudge_x = 0.5, nudge_y = 0.3, segment.alpha = 0.4) +
+  geom_label_repel(data = east_down_site, aes(x = lon, y = lat, label = site), 
+                   size = 3, box.padding = 0.5, nudge_x = 0.35, nudge_y = -0.15, segment.alpha = 0.4) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+
+
+```
+
+### Abiotic parameters
+
+In order to compare abiotic parameters for sites around the coast, large historical databases for both temperature and wave energy were accessed. Shallow water temperatures were sourced from the South African Coastal Temperature Network (SACTN) website (https://github.com/ajsmit/SACTN). Seven different organisations within South Africa contribute to the SACTN, where _in situ_ temperature measurements are made around the South African coast using either hand-held thermometers or digital temperature recorders positioned underwater. The mean duration of the 135 daily time series is 19.7 years, and these _in situ_ data are preferred over satellite SST, which have shown to exhibit large biases [@Smit2013]. Linear interpolated SST were calculated for sites where _in situ_ recorders were absent. Wave energy data formed part of the South African Coastal Vulnerability Assessment, presented to the Department of Environmental Affairs [@Theron2014]. These data are first forecasted using NOAA Wave Watch III (WWIII), with National Centers for Environmental Predictions (NCEP) product as the numerical input [@benassai2006implementation]. Hindcast data from WWIII span from 1994-2013 at a 3-hour resolution. The data are then used to model short –crested waves generated by the wind into the coastal environment, using Simulating Waves in the Nearshore [SWAN; @booij1997swan]. SWAN allows one to extract wave parameters from specific gridded locations in the nearshore. For False Bay, a resolution of 200 meters was modelled, at both 7 meter and 15 meter contours. A 200 meter resolution was used as False Bay was nested within a larger grid area for the research from where the data were sourced.  For Table Bay and east of Cape Hangklip the resolution 500 meters at 7 meters and 15 meters. For this study the 7 meter contours were used.
+
+###Statistical analyses
+
+To compare how kelp morphology varies around the coast, boxplots were constructed to summarise descriptive statistics for all the morphometrics of both species.These boxplots highlight five different descriptive statistics (Minimum, 25^th^ percentile, median, 75^th^ percentile and maximum), as well as the interquartile range. These allow us to visually identify variations and differences in morphology, and to provide evidence that kelp morphologies vary around the coast.Pairwise correlations were plotted to compare the abiotic parameters and understand if wave and temperature parameters correlate with one another around the coast. Therefore fluctuations such as minimum, maximum, range and standard deviations were included as temperature parameters, and standard deviations were included as wave parameters. Median calculations were made for wind and wave direction, as issues arise when calculating mean and standard deviation for compass metrics. Redundancy Analyses (RDA) were performed to understand how kelp morphology is driven by environmental drivers. An RDA performs multiple linear regressions between explanatory and response variables. This allows the user to calculate the amount of variation in response variables explained for by explanatory variables. Therefore response variables are influenced by explanatory variables.  Response variables were represented by morphology measurements, with wave and temperature variables selected as explanatory variables. Temperature and wave parameters were modelled separately, to fully understand and tease apart which abiotic variables most strongly explain kelp morphology variation. This was therefore performed for each species, equating to four RDA’s in total. 
+
+\newpage
+## Results
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+
+
+# Complete lon/lats
+kelp_sites <- read_csv("metadata/sites_complete.csv")
+
+# Ecklonia
+eck_data <- read_csv("data/Ecklonia_morphometrics.csv") %>%
+  mutate(site = replace(site, site == "Buffels Bay", "Buffelsbaai")) %>%
+  mutate(site = replace(site, site == "St. Helena Bay", "St Helena Bay")) %>%
+  # Not using Rocky Bank in this study
+  filter(site != "Rocky Bank")
+
+# Laminaria
+lam_data <- read_csv("data/Laminaria_morphometrics.csv") %>%
+  mutate(site = replace(site, site == "Buffels Bay", "Buffelsbaai")) %>%
+  # NB: Even though I am changing the name, there will still be no lon/lat values for this site
+  # We need to decide how we want to handle this. Give it the same lon/lat as Buffelsbaai?
+  mutate(site = replace(site, site == "Buffels Bay South", "Buffelsbaai South")) %>%
+  # NB: This may also not be an appropriate change
+  mutate(site = replace(site, site == "Bordjiestif North", "Bordjies Deep")) %>%
+  # Not using Rocky Bank in this study
+  filter(site != "Rocky Bank")
+
+# NB: (RWS) I have removed Roman Rock as this has less than a year of temperature data
+
+
+# The SACTN monthly data
+load("data/SACTNmonthly_v4.1.Rdata")
+
+# The missing site temperatures
+load("data/interp_sites.Rdata")
+
+# The patched Roman Rock temperatures
+load("data/rr_patch.Rdata")
+
+## Subset temperatures for collection sites
+temps <- SACTNmonthly_v4.1 %>% 
+  filter(site %in% eck_data$site | site %in% lam_data$site) %>% 
+  select(site, date, temp) %>% 
+  rbind(., interp_sites) %>% 
+  filter(site!= "Roman Rock") %>% 
+  rbind(., rr_patch)
+```
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results='hide'}
+
+
+## Up next we need to calculate the relevant temperature statistics for each site. These are: mean, range, and sd, for Annual, February, and August climatologies.
+
+
+# Monthly clims
+temp_feb_aug <- temps %>% 
+  mutate(date = lubridate::month(date, label = TRUE)) %>% 
+  group_by(site, date) %>% 
+  summarise(mean_temp = mean(temp, na.rm = T),
+            min_temp = min(temp, na.rm = T),
+            max_temp = max(temp, na.rm = T),
+            range_temp = range(temp, na.rm = T)[2]-range(temp, na.rm = T)[1],
+            sd_temp = sd(temp, na.rm = T)) %>%
+  filter(date %in% c("Feb", "Aug")) %>% 
+  ungroup()
+
+# Annual clims
+temp_ann <- temps %>% 
+  mutate(date = lubridate::month(date, label = TRUE)) %>% 
+  group_by(site, date) %>% 
+  summarise(mean_temp = mean(temp, na.rm = T),
+            min_temp = min(temp, na.rm = T),
+            max_temp = max(temp, na.rm = T),
+            range_temp = range(temp, na.rm = T)[2]-range(temp, na.rm = T)[1],
+            sd_temp = sd(temp, na.rm = T)) %>% 
+  ungroup() %>% 
+  select(-date) %>% 
+  group_by(site) %>% 
+  summarise_all(funs(mean(., na.rm = T))) %>% 
+  mutate(date = "Ann") %>% 
+  select(site, date, everything())
+
+# Combine
+temp_clim <- rbind(temp_feb_aug, temp_ann) %>% 
+  group_by(site) %>% 
+  gather(key = statistic, value = value, 
+         mean_temp:sd_temp) %>% 
+  mutate(clim_stat = paste(date, statistic, sep = "_")) %>% 
+  select(-date, -statistic) %>% 
+  spread(key = clim_stat, value = value)
+
+
+
+# Here we need to convert the thermal metrics to Euclidian distances.
+
+env3 <- temp_clim %>% 
+  dplyr::ungroup(site) %>% 
+  dplyr::select(-site) %>% 
+  vegdist(method = 'euclidian')
+env3.mat <- as.matrix(env3)
+env3.diag <- diag(env3.mat[-1, -nrow(env3.mat)])
+env3.diag <- append(0, env3.diag, after = 1)
+
+
+# Wave data 
+
+# Load the loading functions
+source("func/load.wave.R")
+
+# Then load the data
+fb_model <- load.model("data/wave_data/FB")
+tb_model <- load.model("data/wave_data/TB")
+he_model <- load.model("data/wave_data/HE")
+sh_model <- load.model("data/wave_data/SH")
+
+# Combine
+wave_model <- rbind(fb_model, tb_model, he_model, sh_model)
+rm(fb_model, tb_model)
+
+# The site list key
+wave_sites <- read_csv("metadata/sites_complete.csv") %>% 
+  select(site, wave_7, wave_15)
+
+# Calculate the necessary stats
+# Monthly clims
+wave_feb_aug <- wave_model %>% 
+  mutate(date = lubridate::month(date, label = TRUE)) %>% 
+  filter(site != "FB25") %>% # FB_25 has issues with 'hs' and 'tp'
+  group_by(site, date) %>% 
+  summarise_all(funs(mean = mean, sd = sd), na.rm = T) %>%
+  filter(date %in% c("Feb", "Aug")) %>% 
+  ungroup()
+
+# Annual clims
+wave_ann <- wave_model %>% 
+  mutate(date = lubridate::month(date, label = TRUE)) %>% 
+  filter(site != "FB25") %>% # FB_25 has issues with 'hs' and 'tp'
+  group_by(site, date) %>% 
+  summarise_all(funs(mean = mean, sd = sd), na.rm = T) %>%
+  ungroup() %>% 
+  select(-date) %>% 
+  group_by(site) %>% 
+  summarise_all(funs(mean), na.rm = T) %>% 
+  mutate(date = "Ann") %>% 
+  select(site, date, everything())
+
+# Subset directions out
+dirs <- subset(wave_model, select = c(1, 2, 5, 6))
+
+# Seasons
+dirs_feb_aug <- dirs %>% 
+  mutate(date = lubridate::month(date, label = TRUE)) %>% 
+  group_by(site, date) %>% 
+  summarise(dir_min = min(dir, na.rm = T),
+            dir_max = max(dir, na.rm = T),
+            dir_range = range(dir, na.rm = T)[2]-range(dir, na.rm = T)[1],
+            dir_median = median(dir, na.rm = T), 
+            dirw_min = min(dirw, na.rm = T),
+            dirw_max = max(dirw, na.rm = T),
+            dirw_range = range(dirw, na.rm = T)[2]-range(dirw, na.rm = T)[1],
+            dirw_median = median(dirw, na.rm = T)) %>%
+  filter(date %in% c("Feb", "Aug")) %>% 
+  ungroup()
+
+
+
+# Annual
+dirs_ann <- dirs %>% 
+  mutate(date = lubridate::month(date, label = TRUE)) %>% 
+  group_by(site, date) %>% 
+  summarise(dir_min = min(dir, na.rm = T),
+            dir_max = max(dir, na.rm = T),
+            dir_range = range(dir, na.rm = T)[2]-range(dir, na.rm = T)[1],
+            dir_median = median(dir, na.rm = T), 
+            dirw_min = min(dirw, na.rm = T),
+            dirw_max = max(dirw, na.rm = T),
+            dirw_range = range(dirw, na.rm = T)[2]-range(dirw, na.rm = T)[1],
+            dirw_median = median(dirw, na.rm = T)) %>% 
+  ungroup() %>% 
+  select(-date) %>% 
+  group_by(site) %>% 
+  summarise_all(funs(mean(., na.rm = T))) %>% 
+  mutate(date = "Ann") %>% 
+  select(site, date, everything())
+
+# subset useless columns
+dirs_feb_aug <- subset(dirs_feb_aug, select = c(1, 2, 6, 10))
+dirs_ann <- subset(dirs_ann, select = c(1, 2, 6, 10))
+
+
+# combine all direction metrics
+dirs_clim <- rbind(dirs_feb_aug, dirs_ann) %>% 
+  group_by(site) %>% 
+  gather(key = statistic, value = value, 
+         3:4) %>% 
+  mutate(clim_stat = paste(date, statistic, sep = "_")) %>% 
+  select(-date, -statistic) %>% 
+  spread(key = clim_stat, value = value) %>% 
+  left_join(wave_sites, by = c("site" = "wave_7")) %>% 
+  ungroup() %>% 
+  select(-site, wave_15) %>%
+  rename(site = site.y) %>% 
+  select(site, everything()) %>% 
+  na.omit()
+
+# Combine
+# NB: This only uses the wave data from the 7 metre contour
+wave_clim <- rbind(wave_feb_aug, wave_ann) %>% 
+  group_by(site) %>% 
+  gather(key = statistic, value = value, 
+         hs_mean:spw_sd) %>% 
+  mutate(clim_stat = paste(date, statistic, sep = "_")) %>% 
+  select(-date, -statistic) %>% 
+  spread(key = clim_stat, value = value) %>% 
+  left_join(wave_sites, by = c("site" = "wave_7")) %>% 
+  ungroup() %>% 
+  select(-site, wave_15) %>%
+  rename(site = site.y) %>% 
+  select(site, everything()) %>% 
+  na.omit()
+
+# combine all wave metrics
+wave_clim <- cbind(wave_clim, dirs_clim)
+
+# remove all useless direction metrics from original wave_clim
+wave_clim <- subset(wave_clim, select = -c(2,3,4,5,12,13,14,15,22,23,24,25,32,33,40))
+
+## First create mean vlaues from each site for each species
+# Ecklonia
+eck_mean <- eck_data %>% 
+  select(site, frondMass:totalLength) %>% 
+  group_by(site) %>% 
+  summarise_all(funs(mean(., na.rm = T)))
+
+# Laminaria
+lam_mean <- lam_data %>% 
+  select(site, laminaWeight:totalLength) %>% 
+  group_by(site) %>% 
+  summarise_all(funs(mean(., na.rm = T)))
+
+# Correct errors
+# No weight measurements for Laminaria at Sea Point for some reason...
+lam_mean$laminaWeight[lam_mean$site == "Sea Point"] <- NA
+
+
+## Merge the biotic and abiotic variables
+# Ecklonia
+eck_all <- eck_mean %>% 
+  left_join(temp_clim, by = "site") %>%
+  left_join(wave_clim, by = "site") %>% # With wave data
+  na.omit()
+eck_bio <- eck_all %>% 
+  select(frondMass:totalLength) %>% 
+  decostand(method = "standardize")
+eck_abio <- eck_all %>% 
+  # select(Ann_mean_temp:Feb_sd_temp) %>% # Without wave data
+  select(Ann_mean_temp:Feb_tp_sd) %>% # With wave data
+  decostand(method = "standardize")
+
+# Laminaria
+lam_all <- lam_mean %>% 
+  left_join(temp_clim, by = "site") %>%
+  left_join(wave_clim, by = "site") %>% # With wave data
+  na.omit()
+lam_bio <- lam_all %>% 
+  select(laminaWeight:totalLength) %>% 
+  decostand(method = "standardize")
+lam_abio <- lam_all %>% 
+  # select(Ann_mean_temp:Feb_sd_temp) %>% # Without wave data
+  select(Ann_mean_temp:Feb_tp_sd) %>% # With wave data
+  decostand(method = "standardize")
+
+```
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+# Merge site list with temp_clim
+site_temp <- merge(temp_clim, kelp_sites, by = "site")
+
+# Remove unnec columns
+site_temp <- subset(site_temp, select = -c(19:21))
+
+# gather data into less columns
+site_temp <- gather(data = site_temp, "stat", "value", 2:16)
+
+# Split columns
+site_temp <- site_temp %>% 
+  separate(stat, c("season", "statistic", "abioPara"))
+
+
+
+# change season key
+season <- c("Ann" = "Annual", "Feb" = "February", "Aug" = "August")
+statistic <- c("mean" = "Mean", "sd" = "SD", "range" = "Range", "max" = "Max", "min" = "Min")
+
+
+# plot data 
+```
+
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+
+## MEthod 2 (shows individual legends, still squashed)
+maxTemp <- subset(site_temp, statistic == "max")
+minTemp <- subset(site_temp, statistic == "min")
+meanTemp <- subset(site_temp, statistic == "mean")
+sdTemp <- subset(site_temp, statistic == "sd")
+rangeTemp <- subset(site_temp, statistic == "range")
+
+max <- ggplot(data = maxTemp, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = maxTemp, aes(col = value), size = 2) +
+  scale_color_gradient("Max temp (°)", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(season), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+min <- ggplot(data = minTemp, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = minTemp, aes(col = value), size = 2) +
+  scale_color_gradient("Min temp (°)", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(season), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+mean <- ggplot(data = meanTemp, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = meanTemp, aes(col = value), size = 2) +
+  scale_color_gradient("Mean temp (°)", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(season), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+sd <- ggplot(data = sdTemp, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = sdTemp, aes(col = value), size = 2) +
+  scale_color_gradient("SD temp (°)", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(season), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+range <- ggplot(data = rangeTemp, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = rangeTemp, aes(col = value), size = 2) +
+  scale_color_gradient("Range temp (°)", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(season), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+```
+### Temperature parameters
+
+The temperature parameters around the Western Cape coast vary among sites and seasons. During February and August, the west side of Cape point experiences decreased temperatures (Fig. 2).  This region also experiences lower mean and maximum temperatures when compared to False Bay, a region known as east of Cape Point. The range of temperatures within False Bay are larger in winter (August) compared to summer (February) (Fig. 3). The sites north of Kommetjie on the west side display larger temperatures ranges than sites south of Kommetjie on the west side.  
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="Morphometric site locations represented by various temperature parameters. Temperature parameters include minimum, maximum and mean temperatures (° Celsius). These site locations are coloured by the temperature statistic relative to the legends provided. Each temperature parameter is also divided into August (winter) and February (summer) as well as the annual mean.", fig.height=8, fig.width=12, fig.pos="H"}
+
+grid.arrange(min, max, mean, ncol = 1)
+
+```
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="Morphometric site locations represented by various temperature parameters. Temperature parameters include temperature range as well as standard deviation (° Celsius). These site locations are coloured by the temperature statistic relative to the legends provided. Each temperature parameter is also divided into August (winter) and February (summer) as well as the annual mean.", fig.height=8, fig.width=12, fig.pos="H"}
+
+grid.arrange(range, sd, ncol = 1)
+
+```
+
+
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+
+# Wave parameters
+
+# merge sites with wave_clim
+site_wave <- merge(wave_clim, kelp_sites, by = "site")
+
+# remove unecc columns
+site_wave <- subset(site_wave, select = -c(28:30))
+# gather data into less columns
+
+site_wave <- gather(data = site_wave, "stat", "value", 2:25)
+# split columns
+site_wave <- site_wave %>% 
+  separate(stat, c("season", "abioPara", "statistic"))
+
+# change season key
+season <- c("Ann" = "Annual", "Feb" = "February", "Aug" = "August")
+statistic <- c("mean" = "Mean", "sd" = "SD", "range" = "Range", "max" = "Max", "min" = "Min", "median" = "Median")
+abioPar <- c("dir" = "Direction", "dirw" = "Wind direction", "hs" = "Sig. wave height", "tp" = "Wave period", "spw" = "Spw")
+
+# fix incorrect
+
+```
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE}
+
+## MEthod 2 (shows individual legends, still squashed)
+
+medianDir <- subset(site_wave, statistic == "median" & abioPara == "dir")
+medianDirw <- subset(site_wave, statistic == "median" & abioPara == "dirw")
+meanHs <- subset(site_wave, statistic == "mean" & abioPara == "hs")
+sdHs <- subset(site_wave, statistic == "sd" & abioPara == "hs")
+meanSpw <- subset(site_wave, statistic == "mean" & abioPara == "spw")
+sdSpw <- subset(site_wave, statistic == "sd" & abioPara == "spw")
+meanTp <- subset(site_wave, statistic == "mean" & abioPara == "tp")
+sdTp <- subset(site_wave, statistic == "sd" & abioPara == "tp")
+
+# meanDir
+medianDir1 <- ggplot(data = medianDir, aes(x = lon, y = lat)) +
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = medianDir, aes(col = value), size = 2) +
+  scale_color_gradient("medianDir", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) + 
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+
+
+# meanDirw 
+medianDirw1 <- ggplot(data = medianDirw , aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = medianDirw , aes(col = value), size = 2) +
+  scale_color_gradient("medianDirw ", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+
+# meanHs
+
+meanHs1 <- ggplot(data = meanHs, aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = meanHs, aes(col = value), size = 2) +
+  scale_color_gradient("meanHs", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+# sdHs
+sdHs1 <- ggplot(data = sdHs, aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = sdHs, aes(col = value), size = 2) +
+  scale_color_gradient("sdHs", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+# meanSpw
+meanSpw1 <- ggplot(data = meanSpw, aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = meanSpw, aes(col = value), size = 2) +
+  scale_color_gradient("meanSpw", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+# sdSpw
+sdSpw1 <- ggplot(data = sdSpw, aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = sdSpw, aes(col = value), size = 2) +
+  scale_color_gradient("sdSpw", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+# meanTp
+meanTp1 <- ggplot(data = meanTp, aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = meanTp, aes(col = value), size = 2) +
+  scale_color_gradient("meanTp", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+
+# sdTp
+sdTp1 <- ggplot(data = sdTp, aes(x = lon, y = lat)) + 
+  geom_polygon(data = south_africa_coast, aes(group = group), fill = "grey70") +
+  geom_path(data = sa_provinces, aes(group = group)) +
+  geom_point(data = sdTp, aes(col = value), size = 2) +
+  scale_color_gradient("sdTp", low = "blue", high = "red") +
+  coord_fixed(xlim = c(17.85, 19), ylim = c(-32.75, -34.4)) +
+  facet_wrap(~ season, labeller = as_labeller(c(season)), scales = "free", ncol = 3) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank())
+```
+
+### Wave and wind parameters
+
+Not only do the temperature parameters display seasonal fluctuations, but we see similar observations for wave parameters. The west side of Cape Point exhibit increased measurements of median direction, SD and mean significant wave height compared to within False Bay (Fig. 4). Sites within False Bay however display increased standard deviations of wave period. Median wind direction is northerly in winter (Fig. 5), and turns southerly in summer. 
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="Wave parameters relative to each morphometric collection site around the Western Cape coast. These wave parameters include mean and standard deviation of wave direction (° True north), significant wave height (Meters) as well as wave period (Seconds). Sites are colour-coded by the parameter statistic provided by the legend. Each wave parameter is also divided into August (winter), February (summer) and annual means, to visualise seasonal differences.", fig.height=8, fig.width=12, fig.pos="H"}
+
+grid.arrange(medianDir1, meanHs1, sdHs1, meanTp1, sdTp1)
+
+
+
+```
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="Wind parameters relative to each morphometric collection site around the Western Cape coast. These wind parameters include mean and standard deviation of wind direction (° True north) as well as wind speed (Meters/ second). Sites are colour-coded by the parameter statistic provided by the legend. Each wave parameter is also divided into August (winter), February (summer) and annual means, to visualise seasonal differences.", fig.height=8, fig.width=12, fig.pos="H"}
+
+grid.arrange(medianDirw1, meanSpw1, sdSpw1)
+
+```
+
+### Morphologies
+
+#### _Laminaria pallida_
+Lamina length for laminaria pallida showed no geographical pattern moving from west to east. Kommetjie, Olifantsbos and Batsata Rock showed great variability in lamina length, and both Buffels Bay and Betty’s Bay were visually different to Miller’s Point and Roman Rock, when comparing the summary data represented by the boxplots (Fig.6). Lamina thickness showed great variation across sites, with Baboon Rock, Miller’s Point, A-Frame and Roman rock displaying large lamina thickness, significantly different to the rest of the sites. Lamina weight was observed to vary for Baboon Rock and Betty’s Bay. Neighbouring sites A-Frame and Roman Rock also showed visual difference when comparing boxplot summary statistics. An increase in the number of digits was observed as one moved from Cape Point north along the western side of False Bay. This ceased at Batstata Rock, which exhibited significantly less digits compared to the previous site, Bordjiestif North. Stipe diameter showed some geographical grouping, with west of Cape Point sites exhibiting larger stipe diameters compared to False Bay sites. 
+
+Stipe diameter decreased as one rounded the point into False Bay, where a sudden, significant difference was seen between Bordjiestif North and Batsata Rock. Greater variation of stipe length was observed for sites outside of False Bay (Kommetjie, Olifantsbos and Betty’s Bay). Baboon Rock, Miller’s Point, A-Frame and Roman Rock were again grouped together exhibiting the lowest stipe lengths, that were all significantly different to sites found west of Cape Point. Stipe mass displays similar patterns to stipe length, with larger stipe lengths west of Cape Point compared to within False Bay. The thallus mass of _Laminaria pallida_ was observed to be greater for sites around Cape Point, with an observed difference between Batsata Rock and Bordjiestif North, similar to the number of digit patterns. Larger total lengths were observed around Cape Point and Betty’s Bay, with the smallest total lengths at sites that exhibited the greatest lamina thicknesses (Baboon Rock, Miller’s Point, A-Frame and Roman Rock). 
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="Boxplots representing the different _Laminaria pallida_ morphometrics measured around the Western Cape coastline, with the X-axis depicting the specific morphology measured, with units provided. Boxplots represent the minimum, 25^th^ percentile, median and 75^th^ percentile of the morphometrics measured. Interquartile range can be deduced as the different between the 75^th^ and 25^th^ percentiles, and dots represent outliers in the data. Sites are ordered sequentially on the Y-axis by location along the coast. The top site is Sea Point and is located at the north western boundary, and Betty’s Bay as the bottom site is located at the south eastern boundary, from our sample region.", fig.height=8, fig.width=12, fig.pos="H"}
+
+
+# Laminaria morphologies
+
+
+# load data
+lam <- read.csv("data/Laminaria_morphometrics.csv", sep = ",")
+
+# remove unnecessary columns
+lam <- subset(lam, select = -c(1,2,4))
+
+# alter dataframe for more friendly plotting
+lam_gather <- gather(lam, "Morphology", "Measurement", 2:10, na.rm = TRUE)
+
+# Replace morphology names
+lam_gather <- lam_gather %>%
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "digits", "Number of digits")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "laminaLength", "Lamina length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "laminaThickness", "Lamina thickness (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "laminaWeight", "Lamina weight (g)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "stipeDiameter", "Stipe diameter (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "stipeLength", "Stipe Length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "stipeMass", "Stipe mass (g)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "thallusMass", "Thallus mass (g)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "totalLength", "Total length (mm)"))
+
+# Mean morphology per site
+
+lam_gather_mean <- lam_gather %>%
+  group_by(site, Morphology) %>%
+  summarise(mean = mean(Measurement, na.rm = TRUE)) %>%
+  ungroup()
+
+
+# Remove Rocky Bank
+lam_gather_mean <- subset(lam_gather_mean, !site == "Rocky Bank")
+
+# Order site names by location west to east
+positionsLam <- c("Betty's Bay", "Roman Rock","A-Frame", "Miller's Point", "Baboon Rock", 
+                  "Batsata Rock", "Bordjiestif North", "Buffels Bay South", 
+                  "Buffels Bay", "Olifantsbos", "Kommetjie", "Sea Point")
+
+
+# Plot morphologies
+ggplot(data = lam_gather, aes(x = site, y = Measurement)) +
+  geom_boxplot() +
+  facet_wrap(~Morphology, scales = "free_x", strip.position = "bottom") +
+  coord_flip() + 
+  scale_x_discrete(limits = positionsLam) + 
+  theme(strip.background = element_blank(), strip.placement = "outside", text = element_text(size = 4.5)) +
+  theme_bw() +
+  xlab("Site") +
+  ylab("Morphology measurement")
+
+
+```
+
+
+
+#### _Ecklonia maxima_
+
+For frond length, frond mass, stipe circumferences, stipe length and total length of _Ecklonia maxima_ morphometrics, we see a gradual increase in value as one moves south from St. Helena Bay to Kommetjie and Soetwater (Fig. 7). Hout Bay, Kommetjie and Soetwater show similarities in their stipes lengths to Buffels Bay, Batsata Rock and Betty’s Bay, and are significantly different to west of Cape Point counterpart sites such as Oudekraal and Scarborough. A difference for the majority of the morphologies are seen between Soetwater and Scarborough, with significant differences for epiphyte length, frond length, frond mass, stipe length, stipe mass and total length.  A separation along the same stretch of coast (west of Cape Point) for stipe mass shows that Hout Bay, Kommetjie and Soetwater are again significantly different to neighboring west side sites such as Oudekraal and Scarborough. 
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, fig.cap="Boxplots representing the different _Ecklonia maxima_ morphometrics measured around the Western Cape coastline, with the X-axis depicting the specific morphology measured, with units provided. Boxplots represent the minimum, 25^th^ percentile, median and 75^th^ percentile of the morphometrics measured. Interquartile range can be deduced as the different between the 75^th^ and 25^th^ percentiles, and dots represent outliers in the data. Sites are ordered sequentially on the Y-axis by location along the coast. The top site is St. Helena Bay and is located at the north western boundary, and Betty’s Bay as the bottom site is located at the south eastern boundary, from our sample region.", fig.height=8, fig.width=12, fig.pos="H"}
+
+
+# Ecklonia morphologies
+
+
+
+# load data
+eck <- read.csv("data/Ecklonia_morphometrics.csv", sep = ",")
+
+# remove unnecessary columns
+eck <- subset(eck, select = -c(1,2,3,5,7,8))
+
+# alter dataframe for more friendly plotting
+eck_gather <- gather(eck, "Morphology", "Measurement", 2:12, na.rm = TRUE)
+
+# Replace morphology names
+eck_gather <- eck_gather %>%
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "depth", "Depth (m)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "epiLength", "Epiphyte length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "frondLength", "Frond length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "frondMass", "Frond mass (g)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "primaryLength", "Primary length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "primaryWidth", "Primary width (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "stipeCirc", "Stipe circumference (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "stipeLength", "Stipe length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "stipeMass", "Stipe mass (g)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "totalLength", "Total length (mm)")) %>% 
+  mutate(Morphology = replace(Morphology, 
+                              Morphology == "tufts", "Number of tufts"))
+
+# Mean morphology per site
+
+eck_gather_mean <- eck_gather %>%
+  group_by(site, Morphology) %>%
+  summarise(mean = mean(Measurement, na.rm = TRUE)) %>%
+  ungroup()
+
+
+# Order site names by location west to east
+positionsEck <- c("Betty's Bay", "Kalk Bay", "A-Frame", 
+                  "Miller's Point", "Baboon Rock", "Batsata Rock", 
+                  "Buffels Bay", "Scarborough", 
+                  "Soetwater","Kommetjie","Hout Bay", 
+                  "Oudekraal", "St. Helena Bay")
+
+# Remove Depth and Rocky Bank site
+eck_gather <- subset(eck_gather, !Morphology == "Depth (m)")
+eck_gather <- subset(eck_gather, !site == "Rocky Bank" | !site == "De Hoop")
+
+# Plot morphologies
+ggplot(data = eck_gather, aes(x = site, y = Measurement)) +
+  geom_boxplot() +
+  facet_wrap(~Morphology, scales = "free_x", strip.position = "bottom", ncol = 5) +
+  coord_flip() + 
+  scale_x_discrete(limits = positionsEck) +
+  theme(strip.background = element_blank(), strip.placement = "outside", text = element_text(size = 4.5)) +
+  theme_bw() +
+  xlab("Site") +
+  ylab("Morphology measurement")
+
+
+```
+
+
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide"}
+
+
+
+# merge all abiotic data
+combine <- merge(temp_clim, wave_clim, by = "site")
+
+# Gather data
+abio_cor <- gather(combine, "parameter", "measurement", 2:40)
+
+# Order by season/ parameter
+abio_cor <- plyr::arrange(abio_cor, parameter)
+
+# Subset by season
+ann_abio_cor <- abio_cor[c(1:221), ]
+aug_abio_cor <- abio_cor[c(222:442), ]
+feb_abio_cor <- abio_cor[c(443:663), ]
+
+# Change describing terms in rows
+# Annual
+ann_abio_cor <-  ann_abio_cor %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_dir_median", "Median dir")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_dirw_median", "Median wind dir")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_hs_mean", "Mean Hs")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_hs_sd", "SD Hs")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_tp_mean", "Mean Tp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_tp_sd", "SD Tp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_spw_mean", "Mean sPw")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_spw_sd", "SD sPw")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_mean_temp", "Mean temp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Ann_sd_temp", "SD temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Ann_range_temp", "Range temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Ann_max_temp", "Max temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Ann_min_temp", "Min temp"))
+
+
+
+# August
+aug_abio_cor <- aug_abio_cor %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_dir_median", "Median dir")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_dirw_median", "Median wind dir")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_hs_mean", "Mean Hs")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_hs_sd", "SD Hs")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_tp_mean", "Mean Tp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_tp_sd", "SD Tp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_spw_mean", "Mean sPw")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_spw_sd", "SD sPw")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_mean_temp", "Mean temp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Aug_sd_temp", "SD temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Aug_range_temp", "Range temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Aug_max_temp", "Max temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Aug_min_temp", "Min temp"))
+
+# February
+feb_abio_cor <- feb_abio_cor %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_dir_median", "Median dir")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_dirw_median", "Median wind dir")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_hs_mean", "Mean Hs")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_hs_sd", "SD Hs")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_tp_mean", "Mean Tp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_tp_sd", "SD Tp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_spw_mean", "Mean sPw")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_spw_sd", "SD sPw")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_mean_temp", "Mean temp")) %>%
+  mutate(parameter = replace(parameter, parameter == "Feb_sd_temp", "SD temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Feb_range_temp", "Range temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Feb_max_temp", "Max temp")) %>% 
+  mutate(parameter = replace(parameter, parameter == "Feb_min_temp", "Min temp"))
+
+# Spread sideways for each season
+ann_abio_cor <- spread(ann_abio_cor, "parameter", "measurement")
+aug_abio_cor <- spread(aug_abio_cor, "parameter", "measurement")
+feb_abio_cor <- spread(feb_abio_cor, "parameter", "measurement")
+ 
+```
+### Abiotic correlations
+
+There are various strong correlations within the temperature parameters, and within the wave parameters on an annual time scale (Fig. 8). SD Significant wave height (Hs) and mean Hs showed a strong positive correlate(0.92), as well as  SD wave period (Tp) and mean Hs with a strong negative correlation(-0.9) For SD wind speed and mean wind speed a strong positive correlation existed (0.967). Minimum and mean temperatures correlate strongly (0.918), as well as SD wind speed and median wind direction (0.999). A strong correlation exists between SD temperature and temperature range (0.942). Median wind direction and mean wind speed are also correlated well (0.954). We however see no strong correlations between wave and temperature parameters.
+
+These correlations vary through the three timescales (Annual, August and February). Although there are no strong correlations between temperature and wave parameters, we see interesting differences between the seasonal timescales The mean temperature and mean wind speed are weakly correlated in August (0.253)(Fig. 9), but are observed to be more strongly negatively correlated in February (-0.788)(Fig. 10).  The same is seen for minimum temperature and median wind direction in August (0.129) compared to February (-0.715).
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="A correlation graph depicting the relationships that various temperature and wave parameters share, at an annual timescale. The left Y-axis as well as bottom X-axis represent the measurements for the parameters, while the top X-axis and right Y-axis depict the abiotic parameter name. The top right section of the graph represents correlation coefficients between abiotic parameters. The bottom left section provides individual linear regressions between each abiotic parameter, with a fitted line. Each point of each linear graph represents a collection site. The diagonal density plots represent the spread of the data for each abiotic relationship.", fig.height=8, fig.width=12, fig.pos="H"}
+# # ggpairs to plot correlation coefficients
+# # Annual
+ggpairs(data = ann_abio_cor, columns = 2:14, 
+        upper = list(continuous = wrap("cor", size = 3)), 
+        lower = list(continuous = "smooth"), 
+        diag = list(continuous = "densityDiag")) + 
+  theme(text = element_text(size = 9)) + 
+  ggtitle("Annual")
+
+```
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="A correlation graph depicting the relationships that various temperature and wave parameters share, during August. The left Y-axis as well as bottom X-axis represent the measurements for the parameters, while the top X-axis and right Y-axis depict the abiotic parameter name. The top right section of the graph represents correlation coefficients between abiotic parameters. The bottom left section provides individual linear regressions between each abiotic parameter, with a fitted line. Each point of each linear graph represents a collection site. The diagonal density plots represent the spread of the data for each abiotic relationship.", fig.height=8, fig.width=12, fig.pos="H"}
+
+# # August
+ggpairs(data = aug_abio_cor, columns = 2:14, 
+        upper = list(continuous = wrap("cor", size = 3)), 
+        lower = list(continuous = "smooth"), 
+        diag = list(continuous = "densityDiag")) + 
+  theme(text = element_text(size = 9)) + 
+  ggtitle("August")
+
+```
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="A correlation graph depicting the relationships that various temperature and wave parameters share, during February. The left Y-axis as well as bottom X-axis represent the measurements for the parameters, while the top X-axis and right Y-axis depict the abiotic parameter name. The top right section of the graph represents correlation coefficients between abiotic parameters. The bottom left section provides individual linear regressions between each abiotic parameter, with a fitted line. Each point of each linear graph represents a collection site. The diagonal density plots represent the spread of the data for each abiotic relationship.", fig.height=8, fig.width=12, fig.pos="H"}
+
+# # February
+ggpairs(data = feb_abio_cor, columns = 2:14, 
+        upper = list(continuous = wrap("cor", size = 3)), 
+        lower = list(continuous = "smooth"),
+       diag = list(continuous = "densityDiag")) + 
+  theme(text = element_text(size = 9)) + 
+  ggtitle("February")
+  
+```
+  
+
+
+
+### Redundancy analyses 
+  
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide"}
+  
+#### USing RDA's to see how wave parameters and temperature parameters
+# influence the morphology pf kelp species
+
+###
+
+# rename eck_all to eck-site0
+
+eck_site0 <- eck_all
+
+# Subset site names
+eck_site <- subset(eck_site0, select = c(1))
+
+# Subset wave for ecklonia sites (Annual only)
+eck_wave <- subset(eck_site0, select = c(27:32, 45, 46))
+
+# standardise wave measurements
+eck_wave <- eck_wave %>%
+  decostand(method = "standardize")
+
+
+# subset ecklonia morpho's
+eck_wave_bio <- subset(eck_site0, select = c(2:11))
+
+# standardise measurements
+eck_wave_bio <- eck_wave_bio %>%
+  decostand(method = "standardize")
+
+# Force site names as column 0
+eck_wave <- cbind(eck_site, eck_wave)
+
+eck_wave <- eck_wave %>%
+  remove_rownames %>%
+  column_to_rownames(var = "site")
+
+
+eck_wave_bio <- cbind(eck_site, eck_wave_bio)
+
+eck_wave_bio <- eck_wave_bio%>%
+  remove_rownames %>%
+  column_to_rownames(var = "site")
+
+# run RDA
+eck_wave_RDA <- rda(eck_wave_bio ~ ., data = eck_wave)
+
+```
+
+#### Waves as a driver of _Ecklonia maxima_ morphometrics
+
+The morphometrics of _Ecklonia maxima_ were explained more by wave parameters (75%), than temperature parameters (66%), when separate RDA’s were constructed (Fig. 11).  The first two axes for wave parameters driving _Ecklonia maxima_ morphology explained 34% of the variation. Stipe circumference was positively influenced by both mean and SD annual significant wave height as well as annual mean wave direction. There was also a negative influence by annual SD of wave period and wave direction (which correlate with one another) on stipe circumference. The primary length of _Ecklonia maxima_ was influenced positively by annual mean wind direction, and negatively explained by annual SD wind direction. 
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="An RDA, represented by the first two RDA axes, depict the influence that annual wave parameters have on the morphology of _Ecklonia maxima_ sporophytes. Environmental (explanatory) variables, in this case annual wave parameters, are represented by blue vectors extending from the origin. Response variables, in this case _Ecklonia maxima_ morphologies, are representing by red points ordinated across the plane. Sites are represented in black. The top X-axis and right Y-axis represent the explanatory variable axes, while bottom X-axis and left Y-axis represent the response variables axes", fig.height=8, fig.width=12, fig.pos="H"}
+# Plot scaling = 2
+plot(eck_wave_RDA, scaling  = 2)
+
+# Summary
+summary(eck_wave_RDA)
+```
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap=""}
+## Temp
+
+# Subset temps for ecklonia sites (for seasons)
+eck_temp_season <- subset(eck_site0, select = c(17:26))
+
+
+# standardise wave measurements
+eck_temp_season <- eck_temp_season %>%
+  decostand(method = "standardize")
+
+# Force site names as column 0
+eck_temp_season <- cbind(eck_site, eck_temp_season)
+
+eck_temp_season <- eck_temp_season %>%
+  remove_rownames %>%
+  column_to_rownames(var = "site")
+
+
+# run RDA
+eck_temp_season_RDA <- rda(eck_wave_bio ~ ., data = eck_temp_season)
+
+```
+
+#### Temperature as a driver of _Ecklonia maxima_ morphometrics
+
+Although temperature parameters for _Ecklonia maxima_ showed some influence of the morphometric data, the explanation of morphology was not strong, with an R^2^ value of 0.662 and a negative adjusted R^2^ value (-0.138)(Fig. 12). Adjusted R^2^ values are modified R^2^ values to include the number predictors in a model. A negative adjusted R squared values equate to low explanatory power.  This is supported by the lack of relationships between environmental (temperature) and response (morphology) variables (Fig. 12). 
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="An RDA, represented by the first two RDA axes, depict the influence that seasonal temperature parameters have on the morphology of _Ecklonia maxima_ sporophytes. Environmental (explanatory) variables, in this case seasonal temperature parameters, are represented by blue vectors extending from the origin. Response variables, in this case _Ecklonia maxima_ morphologies, are representing by red points ordinated across the plane. Sites are represented in black. The top X-axis and right Y-axis represent the explanatory variable axes, while bottom X-axis and left Y-axis represent the response variables axes.", fig.height=8, fig.width=12, fig.pos="H"}
+# Plot scaling = 2
+plot(eck_temp_season_RDA, scaling = 2)
+
+# Summary
+summary(eck_temp_season_RDA)
+
+```
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide"}
+###### Laminaria
+
+# rename lam_all to lam_site
+
+lam_site0 <- lam_all
+
+# Subset site names
+lam_site <- subset(lam_site0, select = c(1))
+
+# Subset wave for Lam sites (Annual only)
+lam_wave <- subset(lam_site0, select = c(26:31, 44, 45))
+
+# standardise wave measurements
+lam_wave <- lam_wave %>%
+  decostand(method = "standardize")
+
+
+# subset Lam morpho's
+lam_wave_bio <- subset(lam_site0, select = c(2:10))
+
+# standardise measurements
+lam_wave_bio <- lam_wave_bio %>%
+  decostand(method = "standardize")
+
+# Force site names as column 0
+lam_wave <- cbind(lam_site, lam_wave)
+
+lam_wave <- lam_wave %>%
+  remove_rownames %>%
+  column_to_rownames(var = "site")
+
+
+lam_wave_bio <- cbind(lam_site, lam_wave_bio)
+
+lam_wave_bio <- lam_wave_bio%>%
+  remove_rownames %>%
+  column_to_rownames(var = "site")
+
+# run RDA
+lam_wave_RDA <- rda(lam_wave_bio ~ ., data = lam_wave)
+
+```
+#### Waves as a driver of _Laminaria pallida_ morphometrics
+
+For _Laminaria pallida_, the percentage of explained data by wave parameters was 89%, compared to temperature parameters explaining 82% (Fig. 13). By using adjusted R^2^ values, the first two axes for wave parameters driving _Laminaria pallida_ morphology explained 57% of the variation of morphology in this species. An increase in annual SD of wave period and wave direction was a strong influence on lamina thickness of _Laminaria pallida_. Annual mean wave period (which negatively correlates with both annual SD of wave period and wave direction) saw a strong positive influence on lamina length, and a negative influence on lamina thickness. Stipe mass of _Laminaria pallida_ was influenced by annual mean wind direction, as well as annual mean significant wave height, wave direction and SD of significant wave height. The Total length of _Laminaria pallida_ specimens were similarly explained by annual mean significant wave height, wave direction and SD of significant wave height.  
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="An RDA, represented by the first two RDA axes, depict the influence that annual wave parameters have on the morphology of _Laminaria pallida_ sporophytes. Environmental (explanatory) variables, in this case annual wave parameters, are represented by blue vectors extending from the origin. Response variables, in this case _Laminaria pallida_ morphologies, are representing by red points ordinated across the plane. Sites are represented in black. The top X-axis and right Y-axis represent the explanatory variable axes, while bottom X-axis and left Y-axis represent the response variables axes.", fig.height=8, fig.width=12, fig.pos="H"}
+# Plot scaling = 2
+plot(lam_wave_RDA, scaling  = 2)
+
+# Summary
+summary(lam_wave_RDA)
+
+```
+
+
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide"}
+## Temp
+
+# Subset temps for Lam sites (seasons)
+lam_temp_season <- subset(lam_site0, select = c(16:25))
+
+
+# standardise wave measurements
+lam_temp_season <- lam_temp_season %>%
+  decostand(method = "standardize")
+
+# Force site names as column 0
+lam_temp_season <- cbind(lam_site, lam_temp_season)
+
+lam_temp_season <- lam_temp_season %>%
+  remove_rownames %>%
+  column_to_rownames(var = "site")
+
+
+# run RDA
+lam_temp_season_RDA <- rda(lam_wave_bio ~ ., data = lam_temp_season)
+```
+
+#### Temperature as a driver of _Laminaria pallida_ morphometrics
+
+Provided by adjusted R^2^ values, the first two axes of temperature effect on _Laminaria pallida_ morphologies amounted to only 11%, but exhibited a stronger influence than on _Ecklonia maxima_ (Fig. 14). The mean and minimum temperatures during February were observed to negatively influence _Laminaria pallida_ morphologies such as stipe mass, stipe length and stipe diameter, as well as thallus mass and total length. Maximum august temperatures however were observed to positively explain stipe diameter of _Laminaria pallida_. 
+
+```{r, echo= FALSE, message=FALSE, warning=FALSE, results="hide", fig.cap="An RDA, represented by the first two RDA axes, depict the influence that seasonal temperature parameters have on the morphology of _Laminaria pallida_ sporophytes. Environmental (explanatory) variables, in this case seasonal temperature parameters, are represented by blue vectors extending from the origin. Response variables, in this case _Laminaria pallida_ morphologies, are representing by red points ordinated across the plane. Sites are represented in black. The top X-axis and right Y-axis represent the explanatory variable axes, while bottom X-axis and left Y-axis represent the response variables axes.", fig.height=8, fig.width=12, fig.pos="H"}
+
+# Plot scaling = 2
+plot(lam_temp_season_RDA, scaling = 2)
+
+# Summary
+summary(lam_temp_season_RDA)
+
+
+```
+
+\newpage
+## Discussion
+
+This study aimed at investigating how environmental variables may drive kelp morphology along the Western Cape coast.  While temperature plays a large role in determining the distribution of kelps [@Bolton2010], it was found that wave parameters are the underlying variables that explain kelp morphology variation. Annual mean significant wave height, annual mean wave period and annual median wave direction were found to be the main wave parameters that explained much of the morphometric variation of _Ecklonia maxima_ and _Laminaria pallida_. 
+
+###Abiotic environment 
+
+Seasonal variations in significant wave height (Hs), wave period and wave direction were observed from the data (Fig. 4, 5). The direction of swell swings to the south west in winter, generated by strong low pressures that originate from the southern ocean [@Reason2006]. These swells were found to correlate with increased wave period (Tp), wave direction and Hs. False Bay is therefore shielded by these south westerly swells by the Cape Peninsula [@Shipley1964]. In summer, these swells rotate anticlockwise slightly and are able to enter False Bay, providing an explanation for increased variability of Hs and Tp. The wind speed and wind direction support the presence of upwelling in summer, where southerly winds blow parallel to the coast and trigger upwelling [@Field1980]. This is supported by the decreased in temperature in summer (Fig. 2, 3), specifically along the west side of Cape Point. We however see a differentiation of median wind directions in summer, with the western coast of False Bay experiencing south easterly winds, compared to the west side of Cape Point experiencing south westerly winds. It is hypothesised that the topography and elevation along the Cape Peninsula channels and shields winds along the strip of land. This is however absent in winter, where strong northerly winds are experiences from St. Helena Bay to Betty’s Bay [@Field1980]. St. Helena bay experiences decreased median wave directions, and is protected by a headland, similar to the sites found along the western side of False Bay, that are shielded by the Cape Peninsula. There is however increased variability in the wave direction from both False Bay sites and St. Helena Bay, which is encouraged by refraction of waves.  
+
+###Wave period 
+
+An increase in mean annual wave period saw an increase of lamina length of _Laminaria pallida_, but a decrease in lamina thickness(Fig. 13). By decreasing the thickness of the lamina, and increasing the length of the lamina (directly increasing surface area), a larger more flexible kelp can survive in environments with greater wave period. Increased thickness of cortical tissues within the lamina aid photosynthetic ability [@Aminina2012], however increased wave exposure deceases the boundary diffusion layer [@Raven1981; @Hurd2011]. Therefore _Laminaria pallida_ in increased wave period sites may be able to reduce the need for thick lamina for photosynthesis, as the increased wave period provide longer wave events, which decreases the diffusion boundary layer and allow easier nutrient uptake. Conversely we see that sites with reduced wave height and wave period, such as Baboon Rock, Miller’s Point, A-Frame and Roman Rock displayed the greatest lamina thickness, with better photosynthetic ability, for _Laminaria pallida_. Pace [@Pace1972] however studied the effect of wave exposure on _Macrocystis pyrifera_ morphologies, and found that lamina thickness had a strong positive relationship with wave exposure. This may be species specific, with _Macrocystis pyrifera_ attaining larger sizes, but with incomparable stipe and lamina morphologies to _Ecklonia maxima_ and _Laminaria pallida_. 
+
+Lamina thickness showed positive correlation with annual SD wave period (Fig. 13). Although this variable may just negatively correlate with annual mean wave period, another reason may exist. The greatest variation of wave period and wave direction occurs in August along the western side of False Bay.  Kelps at these sites may have developed thicker lamina, with a possible strategy of maximising photosynthesis at the expense of maybe being dislodged through rare increased wave energy events. The ‘spreading out’ of the lamina may also suggest a ‘go with the flow’ tactic, to reduce breaking by being less stiff [@Friedland1995]. Denny et al. [@Denny1997] explored the stress forces that wave period played on _Nereocystis luetkeana_ by exposing various kelp plant sizes to a range of wave period that would be found in coastal environments. Results showed that for shorter kelps (smaller stipe lengths), the maximum stress on a plant occurs at 10s wave periods, but only at 5.5s for larger kelps that are similar in length to the water depth.  Similar results were observed for kelps with larger blades, with maximal stress forces occurring at approximately 8s, compared to a stress ratio of only 0.4 at 16s wave periods. 
+
+###Wave height
+
+Mean annual significant wave height (Hs) was observed to influence _Ecklonia maxima_ stipe circumference, with increased stipe circumference at larger Hs (Fig. 11). An increase in Hs saw greater wave actions as waves are larger, as well as greater wave periods that are positively correlated with Hs. An increase in stipe circumference provides _Ecklonia maxima_ with a more rigid structure to withstand the onslaught of waves.  These greater stipe circumferences of _Ecklonia maxima_ were observed at west side sites such as Soetwater and Kommetjie. While these sites experience increased Hs, they also are subject to seasonal upwelling events [@Andrews1980], that bring with it cold clean water. _Ecklonia maxima_ are thought to be influenced greatly by light attenuation [@Rothman2017], and thus have developed increased (stronger) stipe circumferences to be able to cope in large Hs environments, to access cleaner, nutrient-filled water. The same patterns are observed in _Laminaria pallida_ morphologies, that display increased stipe diameters at Soetwater and Kommetjie as well (Fig. 13).  This increase in stipe diameter correlates with stipe mass of _Laminaria pallida_, providing evidence that this species has developed thicker, strong stipes to persist in this region. Denny et al. (1997) found that the stress ratio decreased as stipe lengths increases, in a fixed depth. Therefore adult _Ecklonia maxima_ sporophytes would experience a lower stress ratio compared to adult _Laminaria pallida_ sporophytes in the same environment, where _Laminaria pallida_ is often a subsurface species to _Ecklonia maxima_. 
+
+### Wave direction
+
+Stipe circumference for _Ecklonia maxima_ were explained by annual wave direction (Fig. 11).  For _Ecklonia maxima_, the sporophytes may be producing stipes that have a greater circumference to cope with increased wave energy. By increasing the wave direction, significant wave heights ‘access’ and hit the west side sites at a more orthogonal angle. This decreases the amount of refraction by headlands and points, and west side sites feel the full direct brunt of waves, instead of refracted swells. Sites such as Kommetjie and Soetwater possessed _Ecklonia maxima_ stipes with greater circumference, where an increase in wave direction, particularly during winter, increases wave energy forces that would act on the kelp. 
+
+###Turbidity
+
+Although turbidity is not a direct wave or temperature parameter, turbidity is influence by various abiotic variables. Increased swells around sandy beaches increase sedimentation and turbidity [@Yang2005], however wind direction and speed can encourage upwelling, with brings to the surface cold, clean, nutrient-rich water [@Boyd1998]. Increased wind speed at sites along the west side of the peninsula in a southerly direction trigger upwelling events [@Boyd1998]. We however see a lack of upwelling events for sites such as Betty’s Bay and Batsata Rock. These two sites display _Ecklonia maxima_ sporophytes with the largest total lengths (Fig. 7), as well as Betty’s Bay displaying the largest total length of _Laminaria pallida_ sporophytes(Fig. 6). Increased total length may be influenced by depth, but Betty’s Bay was sampled at 8 meters, compared to smaller kelps collected from Kalk Bay at 10 meters.  Another reason may be competition. We assume that with a lack of upwelling, increased turbidity occurs at these two sites.  Therefore the ability to grow large may be fuelled by intraspecific competition for each species, as well as interspecific completion between _Ecklonia maxima_ and _Laminaria pallida_. Both sites also display large lamina lengths for _Laminaria pallida_ (Fig. 6), lending to the idea that increased surface area in turbid environments aids in increasing photosynthetic ability. There is however a trade-off between capturing as much light as possible, and preventing dislodgement through increased wave events.
+
+Rothman et al. (2017) found that turbidity increased as one moves north up the west coast of South Africa, and matches a gradient of _Laminaria pallida_ outcompeting _Ecklonia maxima_ in the nearshore. It is believed that _Laminaria pallida_, which copes under low light conditions as a sub-story species to _Ecklonia maxima_ in the south, is able to persist in low light conditions of increased turbidity [@Rothman2017]. This allows the species to dominate environments that are thought to be too turbid for _Ecklonia maxima_ to persist. The ability to proliferate in low-light conditions up the west coast may be aided by the significant hollowing of _Laminaria pallida_ stipes, allowing sporophytes to invest more energy in increased growth rates instead of solid stipe structures.
+
+### Other factors
+
+Stipe lengths of _Ecklonia maxima_ from Kommetjie Hout Bay and Soetwater are similar to Batsata rock and Betty’s Bay, but differs to west side neighbours such as Oudekraal and Scarborough (Fig. 7). Oudekraal and Scarborough experience more variability in wave direction, however they are observed to experience smaller annual mean significant wave heights, when compared to Kommetjie, Hout Bay, Soetwater, as well as Batsata Rock and Betty’s Bay (Fig. 4). Increased stipe length may be advantageous in areas that experience increased wave heights, compares to sites that may be sheltered behind points and headlands, such as Oudekraal and Scarborough. Friedland and Denny (1995) found that longer kelps were able to reduce drag and tension as the sinusoidal displacement of most waves would not ‘stretch’ a kelp out long enough before falling. The ability to grow longer stipes would provide the kelp with a structure that could surpass most wave heights without the risk of dislodgement. 
+
+Although temperature is a known to influence kelp distribution [@Bolton2010], the influence that temperature parameters had on kelp morphologies (Fig. 12, 14) were not as strong as wave and wind parameters( Fig. 11, 13). February minimum temperatures negatively influenced _Laminaria pallida_ stipe structures, as well as thallus mass and total length, however minimum temperatures around the coast, particularly the west side, are influenced by wind direction and wind speed, through localised upwelling [@Boyd1998].  
+
+
+## Conclusion
+
+We therefore see that wave parameter, specifically annual mean significant wave height, mean annual wave period and annual median wave direction, explain much of the variation in morphology for _Ecklonia maxima_ and _Laminaria pallida_. Many of the wave parameters correlate with one another, and together influence both thermal parameters, as well as other coastal events. Turbidity can be viewed as the product of certain wave parameters, or encouraged by wave energy events, and has been found to greatly influence kelp morphology [@Rothman2017]. 
+
+Although sampling occurred through an extensive distribution area of both species of kelps, particular locations were lacking. De Hoop serves as the eastern boundary of _Ecklonia maxima_ distribution [@Bolton2012], however wave parameter data for the region were not available. North of St. Helena Bay one finds the presence of hollow-stipe _Laminaria pallida_ [@Molloy1996]. This area may have served a purpose in comparing hollow and solid filled stipes that encounter similar wave and temperature regimes, and how their morphologies may differ from one another. Although stipe length and circumference provide evidence for increased strength in high flow environments, the inclusion of holdfast structure may have aided in understanding attachment strengths between sites and regions. 
+
+Future work may include measuring morphological traits such as stipe flexibility, holdfast strength and breaking force of kelps around the study region. This may aid in understanding how kelps of the same size from different environments use physiological structures to persist. Lastly the inclusion of kelps that have grown in extremely reduced wave environments, such as behind harbour walls and within marina’s would provide near perfect control samples, that could be used to compare allometric growth rates to specimens in extreme wave exposure locales. While temperature may influence the distribution of macroalgae, localised variation of morphology is driven mainly by wave parameters, particularly wave direction, significant wave height and wave period. These parameters are found to vary through time and space, and play an important role in moulding macroalgae around South Africa. 
+
+\newpage
+## References
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\setlength{\parskip}{8pt}
