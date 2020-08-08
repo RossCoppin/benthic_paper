@@ -20,13 +20,9 @@ output:
 
 Kelps are a cold-water species of large brown algae, belonging to the order Laminariales. They are regarded as ecosystem engineers, providing a 3-dimensional habitat for a variety of fauna and flora. In addition, kelp ecosystems host a number of economically important species such as lobster, abalone and fish [@Dayton1985; @Steneck2002]. Various abiotic (e.g. light, wave exposure, sedimentation) and biotic (e.g. grazing) factors structure kelp forests [@Devinny1978; @Dayton1992; @Utter1996; @Toohey2004; @Rothman2006; @Wernberg2008; @pedersen2012a]. Variations in these factors ultimately affects the way kelp-associated benthos communities are structured [@Dayton1985; @Guimaraes1996; @Wernberg2008; @Wernberg2009]. 
 
-Temperature is recognised as the main abiotic driver of marine species distributions [@Dayton1992; @Hiscock2004; @Wernberg2011; @Wernberg2013; @Wernberg2016; @Mabin2013]. Given kelp’s preference for cold-temperate waters, ocean warming poses a serious threat to these ecosystems [@Wernberg2010; @Wernberg2011; @Verges2016]. In the absence of kelp, other types of systems may persist, for example algal turf, coralline reefs or urchin barrens [Verges2016]. These other systems support a different array of fauna and flora and are considered less diverse and less productive than kelp forests [@Dayton1985; @Connell2008; @Byrnes2011]. In future climate scenarios, species distributions are expected to shift poleward in response to changing ocean temperatures. Given kelps are cold-water species, changes in ocean temperatures, particularly warming, could have detrimental effects on their growth, survival, reproduction and recruitment.
-
-wave exposure is regarded as another important abiotic factor in shaping kelp communities. Add section here....
+Temperature is recognised as the main abiotic driver of marine species distributions [@Dayton1992; @Hiscock2004; @Wernberg2011; @Wernberg2013; @Wernberg2016; @Mabin2013]. Given kelp’s preference for cold-temperate waters, ocean warming poses a serious threat to these ecosystems [@Wernberg2010; @Wernberg2011; @Verges2016]. In the absence of kelp, other types of systems may persist, for example algal turf, coralline reefs or urchin barrens [Verges2016]. These other systems support a different array of fauna and flora and are considered less diverse and less productive than kelp forests [@Dayton1985; @Connell2008; @Byrnes2011]. In future climate scenarios, species distributions are expected to shift poleward in response to changing ocean temperatures. Given kelps are cold-water species, changes in ocean temperatures, particularly warming, could have detrimental effects on their growth, survival, reproduction and recruitment. Wave exposure is regarded as another important abiotic factor in shaping kelp communities. Add section here....
 
 Other abiotic drivers such as light [@Dayton1984; @Bolton1985a; @Dieck1993; @Sjøtun2006; @Wernberg2008], sedimentation [@Duggins1990; @Vadas1992; @Schiel2006; Schiel2006] and water motion [@Hurd2000; @Kawamata2001; @Mudge2003; @Scrosati2004; @Wernberg2008; @pedersen2012a] have been shown to be important in the settlement, growth, and survival of kelp and biotic variables (e.g. see @Black1976; @Kennelly1983; @Dayton1984; @Harris1984; @Carpenter1990; @Sivertsen2006; @Harley2012) play an equally important role in structuring kelp communities, through alteration in top-down and bottom-up control mechanisms [@Breen1976; @Duggins1980; @Harris1984; @Estes1995; @Shears2002; @Arkema2009; @Blamey2012].
-
-### The South African context
 
 _Ecklonia maxima_ a large canopy-forming kelp that dominates shallow temperate reefs off South Africa, particularly along the southern part of the west and the south-west coasts [@Bolton2002]. The south-west coast is considered a transition zone between the cool-temperate west coast and warm-temperate south coast and is characteristic of a rapid change in ocean temperature as well as an overlap in species composition between the two coasts [@Bolton2002]. Kelp forests on the west coast north of Cape Point are largely dominated by rock lobsters Jasus lalandii, filter-feeders (including the mussels Choromytilus meridionalis Krauss, and Aulomya ater Molina) and red understory seaweeds [@Field1976; @Field1980a; @Leliaert2000; @Levitt2002]. Kelp forests east of Cape Point are grazer dominated [@Anderson1997; 2006; @Leliaert2000] and understory algae include a mixture of Ochrophyta, Chlorophyta and to a lesser extent Rhodophyta. These differences have been attributed largely to temperature but factors such as light, water motion, depth and grazer abundance may also play a role [@Velimirov1977; @Field1980; @Leliaert2000; @Bolton2002; @Levitt2002]. East of False Bay, kelp ecosystems have recently undergone a shift in benthic communities because of an increase in abundance of _J. lalandii_, a well-known predator of benthic herbivores including the urchin Parechinus angulosus [@Blamey2010; @Blamey2012].
 
@@ -34,42 +30,33 @@ The sea urchin _P. angulosus_ is the dominant herbivore in South African kelp fo
 
 Population structure of _E. maxima_ may depend on a variety of factors such as temperature [@Lee1988; @Raven1988; @Wiencke1989; @Dieck1993; @Connell2010; @Bartsch2012; @Mabin2013], light [@Lee1988; @Altamirano2004; @Wernberg2008; @Arkema2009; @Tait2014], wave motion [@Graham1997a; @Kawamata2001; @Wernberg2005; @FowlerWalker2006; @pedersen2012a] and nutrients [@Jackson1977; @AndrewsHutchings1980; @Field1980b; @Probyn1985; @Guimaraes1996; @Edwards2006]. At shallow depths (2–3m), the canopy tends to reach the surface; however, the structure changes to a mixture of sub-canopy and canopy at greater depths (5–10m), with eventual transition into _L. pallida_ dominated canopy (>10m) [@Rothman2006; @Rothman2010]. Therefore, from the surface it may appear that there is a change in biomass due to reduction in canopy cover with depth; however, due to the presence of sub-canopy kelps at deeper depths the biomass changes insignificantly [@Rothman2006]. Populations of E. maxima dominate the west coast, but more recently have increased in density in False Bay and further east [@Reimers2012], extending their range by 70km along the south coast [@Bolton2012] The range extension of E. maxima has been associated with a possible cooling and increased nutrient supply in the nearshore around the South African south-west coast [@Moloney2005; @Blamey2015b].
 
-In South African kelp forests the effects of grazing on macroalgal communities may be considered insignificant relative to northern hemisphere regions, given that the urchin P. angulosus feeds mostly on drift kelp, but is known to also feed on juvenile or early developmental stages of kelp @Fricke1979, which have been shown to obtain refuge in kelp holdfasts [@Anderson1997]. Studies by @Day2000; @Day2002 have shown the importance of P. angulosus in sheltering juvenile Haliotis midae and have shown the urchin to be a selective forager [@Anderson1982]. Much of the past research on South African kelps has focused on kelp population dynamics in relation to different harvesting techniques, and the effects of temperature on physiology, growth, function and distribution. Research on kelp ecosystems have focused on understanding energy flow in this system and associated benthic community structures, as well as species interactions between key species. However, there is no recent work investigating differences in benthic species composition between kelp beds presenting contrasting temperature regimes and presence/absence of key predators. Given that temperature is a major driver of species distributions, this study offers a unique opportunity to investigate if kelp forest benthic species composition differs between cooler and warmer areas, and in the presence/absence of _J. lalandii_.
+In South African kelp forests the effects of grazing on macroalgal communities may be considered insignificant relative to northern hemisphere regions, given that the urchin _P. angulosus_ feeds mostly on drift kelp, but is known to also feed on juvenile or early developmental stages of kelp @Fricke1979, which have been shown to obtain refuge in kelp holdfasts [@Anderson1997]. Studies by @Day2000; @Day2002 have shown the importance of P. angulosus in sheltering juvenile Haliotis midae and have shown the urchin to be a selective forager [@Anderson1982]. Much of the past research on South African kelps has focused on kelp population dynamics in relation to different harvesting techniques, and the effects of temperature on physiology, growth, function and distribution. Research on kelp ecosystems have focused on understanding energy flow in this system and associated benthic community structures, as well as species interactions between key species. However, there is no recent work investigating differences in benthic species composition between kelp beds presenting contrasting temperature regimes and presence/absence of key predators. Given that temperature is a major driver of species distributions, this study offers a unique opportunity to investigate if kelp forest benthic species composition differs between cooler and warmer areas, and in the presence/absence of _J. lalandii_.
 
-### Sites
+### Site description
 
 The South African coastline has been catergorised into three marine provinces. These marine provinces are determined by temperature regimes and the resulting distribution of benthic fauna and flora. The west coast is characterised by cool water which extends as far north as Namibia, and is often referred to as the Benguela Marine Province with its southern limit around Cape Point. The annual mean temperature for areas along the west coast are generally between 12–14°C. However, there are rapid and wide temperature changes during periods of upwelling that may persist for days at a time. Due to the upwelling, nutrient concentrations are also more abundant in this region compared to regions outside of the influence of the Benguela Current. The west coast region has been termed as ‘cool-temperate’ region, which is defined as a region where mean monthly temperatures are always above 10°C and always below 15°C [@Smit2013]. East of Cape Point marks the beginning of an overlap or transition area, which is also referred to as the Benguela-Agulhas Transition Zone [@Smit2013]. This area is comprised of seaweed species representative of the Benguela Marine Province and the Agulhas Marine Province, which starts east of Cape Agulhas [@Smit2013]. The Agulhas Marine Province is characterised by a wide temperature range of up to 7°C difference between mean monthly temperatures between summer and winter [@Smit2013]. The study sites selected for this research are present within the Benguela Marine Province and the Benguela-Agulhas Transition Zone.
 
-Oudekraal (Figure 2.1) is within the Benguela Marine Province and experiences the cold ocean temperatures and a higher nutrient flux typical of upwelling systems [@Blamey2015a; @Smit2016]. Max temperatures of 18°C and 12°C are experienced in the summer and winter months respectively (Figure 2.2) [@Schlegel2017]. Bordjies Reef is just north of Cape Point, inside False Bay, and falls within the transition zone between the cool-temperate west and warm-temperate south coasts. This latter site is substantially warmer because it is characterised by reduced upwelling as well as a greater annual thermal variability (max of 22.5°C and 18°C in the summer and winter months respectively) by virtue of it being influenced by upwelling from the Benguela Current and the warming influence of the Agulhas Current [@Smit2016; @Schlegel2017]. Betty's Bay is east of False Bay, but still within the transition zone and is now characterised by a greater abundance of rock lobster and fewer grazers, following the lobster invasion in the early 1990s [@Blamey2010]. It has a maximum temperature of 21°C and 18°C in summer and winter respectively and is thus like that of Bordjies Reef in terms of its thermal regime [@Schlegel2017].
-
-In terms of the topography, Oudekraal has a very heterogeneous topography due to the presence of large granite boulders. Bordjies Reef is a flat with small occasional rocky outcrops, while at Betty's Bay the kelps are located on reefs that are separated by kelp-free gullies.
-
-### Aim
+Oudekraal (Figure 2.1) is within the Benguela Marine Province and experiences the cold ocean temperatures and a higher nutrient flux typical of upwelling systems [@Blamey2015a; @Smit2016]. Max temperatures of 18°C and 12°C are experienced in the summer and winter months respectively (Figure 2.2) [@Schlegel2017]. Bordjies Reef is just north of Cape Point, inside False Bay, and falls within the transition zone between the cool-temperate west and warm-temperate south coasts. This latter site is substantially warmer because it is characterised by reduced upwelling as well as a greater annual thermal variability (max of 22.5°C and 18°C in the summer and winter months respectively) by virtue of it being influenced by upwelling from the Benguela Current and the warming influence of the Agulhas Current [@Smit2016; @Schlegel2017]. Betty's Bay is east of False Bay, but still within the transition zone and is now characterised by a greater abundance of rock lobster and fewer grazers, following the lobster invasion in the early 1990s [@Blamey2010]. It has a maximum temperature of 21°C and 18°C in summer and winter respectively and is thus like that of Bordjies Reef in terms of its thermal regime [@Schlegel2017]. In terms of the topography, Oudekraal has a very heterogeneous topography due to the presence of large granite boulders. Bordjies Reef is a flat with small occasional rocky outcrops, while at Betty's Bay the kelps are located on reefs that are separated by kelp-free gullies.
 
 The aim of this study was to determine if contrasting temperature regimes and wave climate drive differences in _Ecklonia maxima_ populations and their associated benthos. This aim was met through the follwing objectives:
 1.Determine if kelp populations and their associated benthos are different within and between sites
 2.Determine if temperature regime or wave climate is driving these potential differences
 3.Determine what temperature and wave climate parameters are contributing most to the differences
 
-## Methods
-### Data collection
+# Methods
+## Data collection
 ### Benthic 
 
 At each site, two 16m diameter circular plots within the middle of the kelp beds were selected. Each plot was approximately 200m^2^ in area. Long-term temperature loggers (StarOddi: Starmon mini) are located nearby at each site. Each plot was permanently marked with a 0.5 m railway bar placed in the center of the plot and a GPS position recorded. Sampling of the plots involved SCUBA divers attaching a transect line to the railway bar at the center of the plot and swimming out 8m along predetermined compass bearings. Rock lobsters and abalone were counted within 1m either side of the transect. On the return swim towards the center of the plot 0.5 × 0.5m quadrats were sampled at 1m and 4m along the transect. The percentage cover of sand, rock, foliose algae, encrusting coralline algae, sponge, mussel and silt were estimated and recorded. Larger invertebrates such as abalone and rock lobster were counted and recorded 1m either side of the transect line. All other species encountered within the quadrats, except adult kelp and larger invertebrates mentioned above, were then scraped off, placed in collecting bags, and taken back to the laboratory where they were identified and weighed (wet and dry mass in grams). These steps were repeated on four different compass bearings giving: (1) a total of eight (0.5 × 0.5m) quadrats sampled for each of the two plot (i.e. 16 quadrats per site); and (2) a total of four 8m transects for each of the two plots for the rock lobster and abalone counts. Given the abundance of urchins at some sites, a mean biomass estimate was obtained for this species. This was achieved through collecting 50 individuals of _P. angulosus, which were then oven dried, weighed and mean biomass calculated. Biological material in collecting bags, taken from the quadrats, were transferred to plastic sample bags. Back in the laboratory all samples were frozen at -20°C for later identification. All biological material were identified as far as possible to species and their wet and oven dry mass were measured and recorded.
-
-## Statisical analyses
 
 \newpage
 
 ## Results
 
-Intro explanation
-
 ```{r include=FALSE}
 
-fauna_df <-  read.csv(file = "data/fauna.csv", sep = ";", check.names = FALSE)
-flora_df <-  read.csv(file = "data/flora.csv", sep = ";", check.names = FALSE)
-community_df <- read.csv(file = "data/community.csv", sep = ";", check.names = FALSE)
+fauna_df <-  read.csv(file = "data/community_data/fauna.csv", sep = ";", check.names = FALSE)
+flora_df <-  read.csv(file = "data/community_data/flora.csv", sep = ";", check.names = FALSE)
 
 ```
 
@@ -79,50 +66,26 @@ library(ggplot2)
 library(reshape2)
 library(vegan)
 library(tidyverse)
+library(gridExtra)
 
 ```
 
 ## Community structure
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r data wrangle and prep, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 
 fauna_lng <- melt(fauna_df, id.vars = c("site", "plot", "id"), value.name = "biomass", variable.name =  "species")
 
-fauna_sum <- fauna_lng %>% 
+fauna_sum <- fauna_lng %>% # Calculate mean species biomass for each site
   group_by(site, species) %>% 
-  summarise(mean_biomass = mean(biomass, na.rm = T),
-            min_biomass = min(biomass, na.rm = T),
-            max_biomass = max(biomass, na.rm = T),
-            range_biomass = range(biomass, na.rm = T)[2]-range(biomass, na.rm = T)[1],
-            sd_biomass = sd(biomass, na.rm = T)) %>% 
+  summarise(biomass = mean(biomass, na.rm = T)) %>% 
   ungroup() 
-
-fauna_sum <- melt(fauna_sum, id.vars = c("site", "species"), value.name = "value")
-
-plot_fauna <- ggplot(data = fauna_sum, aes(x= species, y = mean_biomass, color = site)) 
-plot_fauna <- plot_fauna + geom_point()
-plot_fauna <- plot_fauna + theme(axis.text.x = element_text(angle = 90, hjust = 0, vjust = 0))
-plot_fauna <- plot_fauna + coord_flip()
-
 
 flora_lng <- melt(flora_df, id.vars = c("site", "plot", "id"), value.name = "biomass", variable.name =  "species")
 
-flora_sum <- flora_lng %>% 
+flora_sum <- flora_lng %>% # Calculate mean species biomass for each site
   group_by(site, species) %>% 
-  summarise(mean_biomass = mean(biomass, na.rm = T))%>% 
+  summarise(biomass = mean(biomass, na.rm = T))%>% 
   ungroup()  
-
-flora_sum <- melt(flora_sum, id.vars = c("site", "species"), value.name = "mean_biomass")
-
-
-plot_flora <- ggplot(data = flora_sum, aes(x= species, y = mean_biomass, color = site)) 
-plot_flora <- plot_flora + geom_point()
-plot_flora <- plot_flora + theme(axis.text.x = element_text(angle = 90, hjust = 0, vjust = 0))
-plot_flora <- plot_flora + coord_flip()
-
 ```
-
-
-
-
 
